@@ -1,0 +1,379 @@
+/* line 5, common.less */
+a:visited,
+a:link {
+  color: #383838;
+}
+/* line 8, common.less */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+}
+/* line 15, common.less */
+.page-theme-a {
+  background: #af2812;
+}
+/* line 18, common.less */
+.page-theme-a .ui-navbar a {
+  color: #7e180b;
+  padding: .7em 0em;
+}
+/* line 22, common.less */
+.page-theme-a .ui-navbar a.ui-btn {
+  border-color: #af2812;
+}
+/* line 25, common.less */
+.page-theme-a .ui-navbar a.ui-btn-active {
+  color: #ffffff;
+  border-right: 1px #6e1208 solid;
+  background: #91210f;
+}
+/* line 30, common.less */
+.hd-theme-b {
+  border-bottom: 0.08em solid #d2d2d2;
+}
+/* line 33, common.less */
+s,
+b,
+i {
+  text-decoration: none;
+  list-style: none;
+}
+/* line 37, common.less */
+.red {
+  color: #af2812;
+}
+/* line 40, common.less */
+.bd {
+  padding: 0;
+}
+/* line 43, common.less */
+.fl {
+  float: left;
+}
+/* line 46, common.less */
+.fr {
+  float: right;
+}
+/* line 49, common.less */
+.item {
+  overflow: hidden;
+}
+/* line 52, common.less */
+.tooltip {
+  overflow: hidden;
+  background: #000000;
+  opacity: 0.7;
+  color: #ffffff;
+  font-size: 1em;
+  z-index: 100;
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+/*图片*/
+/* line 66, common.less */
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+}
+/* line 74, common.less */
+.img-wide {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding-bottom: 100%;
+}
+/* line 80, common.less */
+.img-md {
+  width: 40%;
+}
+/* line 83, common.less */
+.product-list .info-wrap {
+  width: 56%;
+  overflow: hidden;
+}
+/* line 87, common.less */
+.inner-wide {
+  overflow: hidden;
+}
+/* line 90, common.less */
+.row {
+  overflow: hidden;
+  margin-bottom: 0.31em;
+}
+/*进度条*/
+/* line 95, common.less */
+.progress {
+  height: 0.625em;
+  overflow: hidden;
+  border-radius: 0.25em;
+  background-color: #eeeeee;
+  margin-bottom: 0.31em;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 103, common.less */
+.progress .progressbar {
+  height: 100%;
+  font-size: 0.75em;
+  background-color: #af2812;
+}
+/* line 108, common.less */
+.number-wrap {
+  font-size: 0.75em;
+}
+/* line 111, common.less */
+.word-wrap {
+  font-size: 0.75em;
+  color: #999999;
+}
+/* line 115, common.less */
+.price {
+  font-size: .875em;
+  line-height: 1.25;
+  color: #999999;
+  margin-bottom: 0.31em;
+}
+/* line 121, common.less */
+.addCart {
+  width: 3em;
+  height: 3em;
+  border: 1px solid #DDDDDD;
+  font-size: 2em;
+  background: #f1f1f1;
+  border-radius: 0.25em;
+}
+/* line 129, common.less */
+.addCart button {
+  padding: 0;
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  border: 0;
+}
+/*所有商品--排序*/
+/* line 139, common.less */
+.sort-bar {
+  background: #eeeeee;
+}
+/* line 142, common.less */
+.sort-bar ul li a {
+  border: 1px solid #d2d2d2;
+  border-right-width: 0;
+}
+/* line 146, common.less */
+.sort-bar ul li:last-child a {
+  border-right-width: 1px;
+}
+/* line 149, common.less */
+.sort-bar ul li a.ui-btn-active {
+  color: #af2812;
+  background: #ffffff;
+  border-bottom-color: #ffffff;
+}
+/* line 154, common.less */
+.product-list .item {
+  padding: 0.625em;
+  margin: 0.625em;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  margin-bottom: 0.625em;
+}
+/* line 161, common.less */
+.product-list .title {
+  font-size: 0.875em;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+/* line 166, common.less */
+.product-list .progress-wrap {
+  width: 60%;
+}
+/*商品详情*/
+/* line 170, common.less */
+.period-nav {
+  background: #ffffff;
+}
+/* line 173, common.less */
+.ui-header .period-nav a.ui-link {
+  padding-right: 0;
+  padding-left: 0;
+  border-top-color: #d2d2d2;
+  border-right: 1px dashed #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+/* line 180, common.less */
+.period-nav ul li:last-child a.ui-link {
+  border-right: 0;
+}
+/* line 183, common.less */
+.ui-header .period-nav a.ui-btn-active {
+  background: #af2812;
+  border-right: 0;
+  color: #ffffff;
+}
+/* line 188, common.less */
+.btn-group > .ui-btn {
+  border: 1px solid #d2d2d2;
+  background: #f9f9f9;
+  font-weight: normal;
+  text-align: left;
+}
+/* line 194, common.less */
+.nav-btn {
+  border-top: 1px solid #c9cacb;
+  background: #eeeeee;
+}
+/* line 198, common.less */
+.nav-btn ul {
+  overflow: hidden;
+  padding: 0 1em;
+}
+/* line 202, common.less */
+.nav-btn ul li {
+  width: 38%;
+  float: left;
+  padding-right: 1em;
+}
+/* line 207, common.less */
+.nav-btn ul li:last-child {
+  padding-right: 0;
+}
+/* line 210, common.less */
+.btn-buy {
+  background: #af2812;
+  color: #ffffff;
+}
+/* line 214, common.less */
+.btn-add {
+  background: #fad399;
+  color: #af2812;
+}
+/* line 218, common.less */
+.cart {
+  font-size: 20px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  margin: .3em 0;
+  border: 1px solid #DDDDDD;
+  background: #f1f1f1;
+  border-radius: 0.25em;
+  position: relative;
+}
+/* line 230, common.less */
+.cart s {
+  display: block;
+  position: absolute;
+}
+/* line 234, common.less */
+.nav-btn ul li:last-child {
+  width: 12%;
+}
+/*登录注册*/
+/* line 238, common.less */
+.fieldcontain {
+  position: relative;
+}
+/* line 241, common.less */
+.loginForm .username,
+.loginForm .password {
+  border-radius: 0;
+  border-width: 0.08em;
+  border-style: solid;
+  border-top-color: #a9a9a9;
+  border-left-color: #a9a9a9;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  background: #eeeeee;
+  text-indent: 20px;
+}
+/* line 252, common.less */
+html .btn-theme-a {
+  background: #af2812;
+  color: #ffffff;
+}
+/* line 256, common.less */
+.inner-bar {
+  margin: 0.6em auto;
+  display: block;
+  text-align: center;
+}
+/* line 261, common.less */
+.inner-bar a {
+  text-decoration: none;
+}
+/* line 264, common.less */
+.inner-bar b {
+  margin: 0 10px;
+  color: #999999;
+}
+/* line 268, common.less */
+.else-login {
+  overflow: hidden;
+}
+/* line 271, common.less */
+.else-login .title {
+  text-align: center;
+  padding: 10px;
+  color: #818181;
+  border-bottom: 1px dashed #d2d2d2;
+}
+/* line 277, common.less */
+.else-login ul {
+  padding: 0.4em 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 282, common.less */
+.else-login ul li {
+  float: left;
+  width: 33.333%;
+}
+/* line 286, common.less */
+.else-login ul li a {
+  display: block;
+  margin: 0 auto;
+  width: 3.125em;
+  height: 3.125em;
+  background: url("../images/icon.png") no-repeat;
+}
+/* line 293, common.less */
+.else-login ul li a.sina {
+  background-position: 0 -1px;
+}
+/* line 296, common.less */
+.else-login ul li a.wx {
+  background-position: -6.8125em -1px;
+}
+/* line 299, common.less */
+.else-login ul li a.qq {
+  background-position: -14.25em -1px;
+}
+/* line 302, common.less */
+.agree-bar {
+  font-size: 0.75em;
+}
+/* line 305, common.less */
+.agree-bar a {
+  text-decoration: none;
+  color: #3f6dff;
+}
+/* line 309, common.less */
+.agree-bar.ui-checkbox-on:after {
+  background-color: #af2812;
+}
+/* line 312, common.less */
+.agree-wrap {
+  background: #ffffff;
+  font-size: 0.875em;
+}
