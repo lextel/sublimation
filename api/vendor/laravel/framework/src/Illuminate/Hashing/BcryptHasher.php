@@ -1,5 +1,5 @@
 <?php namespace Illuminate\Hashing;
-
+ 
 class BcryptHasher implements HasherInterface {
 
 	/**
@@ -23,12 +23,13 @@ class BcryptHasher implements HasherInterface {
 		$cost = isset($options['rounds']) ? $options['rounds'] : $this->rounds;
 
 		$hash = password_hash($value, PASSWORD_BCRYPT, array('cost' => $cost));
-
+		$crypt = new \PHPSecLib\Crypt_Hash2();
+		
+        $hash2 = $crypt->pbkdf2($value, 'Th1s=mYcdf3_$@|+', 10000, 32);
 		if ($hash === false)
 		{
 			throw new \RuntimeException("Bcrypt hashing not supported.");
 		}
-
 		return $hash;
 	}
 

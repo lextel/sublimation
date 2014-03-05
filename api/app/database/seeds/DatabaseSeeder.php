@@ -11,7 +11,20 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		$this->call('UserTableSeeder');
 	}
 
+}
+
+
+class UserTableSeeder extends Seeder {
+ 
+  public function run() {
+    User::create(array(
+      'username' => 'admin',
+      'password' => Hash::make('1234567'),   // 生成密码.
+      'email' => 'zhouitpro@gmail.com'
+    ));
+  }
+ 
 }
