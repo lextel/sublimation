@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lltao.app" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>乐乐淘</name>
+    <description>
+        乐乐淘是一种新型的网购模式，只需10积分（10积分=1元）就有可能买到一件商品。乐拍把一件商品平分成若干“等份”出售，每份10积分， 当一件商品所有“等份”售出后抽出一名幸运者，该幸运者即可获得此商品。
+    </description>
+    <author email="dev@lltao.com" href="http://www.lltao.com">
+        乐乐淘开发团队
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
