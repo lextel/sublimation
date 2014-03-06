@@ -562,9 +562,9 @@ class Crypt_Base
         switch ($method) {
             default: // 'pbkdf2'
                 $func_args = func_get_args();
-
+                
                 // Hash function
-                $hash = isset($func_args[2]) ? $func_args[2] : 'sha1';
+                $hash = isset($func_args[2]) ? $func_args[2] : 'sha256';
 
                 // WPA and WPA2 use the SSID as the salt
                 $salt = isset($func_args[3]) ? $func_args[3] : $this->password_default_salt;
