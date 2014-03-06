@@ -49,6 +49,21 @@ i {
 .item {
   overflow: hidden;
 }
+.money {
+  font-size: 0.75em;
+}
+.word {
+  font-size: 0.875em;
+}
+.word s {
+  margin: 0 0.315em ;
+}
+.small {
+  color: #666666;
+}
+.info-wrap {
+  overflow: hidden;
+}
 .tooltip {
   overflow: hidden;
   background: #000000;
@@ -79,6 +94,22 @@ img {
 }
 .img-md {
   width: 40%;
+}
+.img-mx {
+  width: 30%;
+}
+.img-mx s {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #000000;
+  opacity: 0.6;
+  color: #ffffff;
+  font-size: 0.75em;
+  padding: .312em 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .product-list .info-wrap {
   width: 56%;
@@ -310,4 +341,174 @@ html .btn-theme-a {
 .agree-wrap {
   background: #ffffff;
   font-size: 0.875em;
+}
+/*购物车*/
+.cartImg {
+  margin: 20px auto;
+  width: 180px;
+  height: 160px;
+  background: url("../images/notcart.png") no-repeat;
+}
+.cart-fd {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+.cart-fd p {
+  margin-bottom: 10px;
+}
+.cart-fd .btn-cart {
+  padding: 8px 30px;
+  overflow: hidden;
+  color: #af2812;
+  border: 1px solid #af2812;
+  border-radius: 5px;
+  background: #ffffff;
+}
+.cart-wart {
+  padding: 1em 0;
+}
+.cart-nav {
+  border-top: 1px solid #d2d2d2;
+  background: #eeeeee;
+}
+.total {
+  font-size: 0.75em ;
+  display: inline-block;
+  line-height: 48px;
+}
+.cart-nav .btn-pay.ui-btn {
+  margin: 0.5em ;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  border: 1px solid #af2812;
+  background: #ffffff;
+}
+.check-box {
+  overflow: hidden;
+}
+.check-box .ui-btn-icon-left {
+  padding: 1.1em;
+}
+.cart-list {
+  overflow: hidden;
+  padding: 0 0.8em;
+  margin-bottom: 10px;
+}
+.cart-list .item {
+  width: 82%;
+  padding: .5em;
+  border: 1px solid #d2d2d2;
+  background: #ffffff;
+}
+.cart-list .item .info-wrap {
+  width: 65%;
+}
+.controlgroup {
+  overflow: hidden;
+}
+.cart-list .controlgroup {
+  width: 60%;
+}
+.controlgroup .btn {
+  display: block;
+  float: left;
+  font-weight: bold;
+  width: 1.5em;
+  height: 1.5em;
+  color: #af2812;
+  line-height: 1.5em;
+  text-align: center;
+  border: 1px solid #ababab;
+  background: #d2d2d2;
+}
+.controlgroup .ui-input-text {
+  height: 1.5em;
+  float: left;
+  border-top: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
+}
+.controlgroup .text {
+  max-width: 60px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.inner-wide .delete-box {
+  width: 35%;
+}
+.btn-remove.ui-btn {
+  text-align: left;
+  width: 52px;
+  font-size: 0.85em;
+  padding: .0em .0em;
+  margin: 0;
+  font-weight: normal;
+  color: #666;
+  background: none;
+  border: 0;
+  box-shadow: 0 0 0 0 0;
+}
+.overdue {
+  padding: 0.5em;
+  color: #af2812;
+  border: 1px solid #af2812;
+  background: #ffffff;
+  margin: 1em;
+}
+.paying-list {
+  overflow: hidden;
+  margin: -1em -1em 0;
+}
+.paying-list dt {
+  padding: 0.8em;
+  border-bottom: 1px dashed #d2d2d2;
+  background: #eeeeee;
+}
+.paying-list dt h4 {
+  font-weight: normal;
+  margin-bottom: 0.312em;
+  font-size: 1em;
+}
+.paying-list dd {
+  padding: 0.8em;
+  text-align: right;
+  font-size: 1em;
+}
+.paying-way {
+  overflow: hidden;
+  background: #ffffff;
+}
+.paying-way dt {
+  padding: 1em 0.8em;
+  font-weight: bold;
+  border: 1px solid #d2d2d2;
+  background: #eeeeee;
+}
+.paying-way dd {
+  padding: 1em 0.8em;
+  overflow: hidden;
+  border-bottom: 1px dashed #d2d2d2;
+}
+.paying-way dd:last-child {
+  border-bottom: 0;
+}
+.paying-way dd .ui-checkbox {
+  width: 22px;
+  height: 22px;
+  float: right;
+}
+.btn-pay-for.ui-link {
+  text-align: center;
+  width: 92%;
+  margin: 0;
+  color: #ffffff;
+  display: block;
+  border-radius: 4px;
+  background: #af2812;
+  padding: 0.6em;
+}
+.pay-box {
+  overflow: hidden;
+  margin: 1em;
 }
