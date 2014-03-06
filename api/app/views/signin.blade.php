@@ -21,7 +21,7 @@
         </a>
     </div>
     <div role="main" class="ui-content">
-        <form action="signin" id="loginForm" class="loginForm" method="post">
+        <form action="api/signin" id="loginForm" class="loginForm" method="post">
             <div class="fieldcontain">
                 <label for="name"></label>
                 <input id="username" name="username" class="username" placeholder="请输入您的邮箱" type="text">
@@ -38,7 +38,7 @@
         </form>
     </div>
     <div data-role="footer">
-        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="/signup" data-transition="slide">新用户注册</a></span>
+        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="signup" data-transition="slide">新用户注册</a></span>
         <div class="else-login">
             <div class="title">使用合作方账号登录</div>
             <ul>

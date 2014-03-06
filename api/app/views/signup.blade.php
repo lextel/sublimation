@@ -21,7 +21,7 @@
         </a>
     </div>
     <div role="main" class="ui-content">
-        <form action="/signup" id="registerForm" class="loginForm" method="post">
+        <form action="signup" id="registerForm" class="loginForm" method="post">
             <div class="fieldcontain">
                 <label for="name"></label>
                 <input  name="username" class="username" placeholder="请输入您的邮箱" type="text">
