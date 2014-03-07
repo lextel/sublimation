@@ -498,6 +498,9 @@ html .btn-theme-a {
   height: 22px;
   float: right;
 }
+.paying-way dd.notMoney {
+  color: #999999;
+}
 .btn-pay-for.ui-link {
   text-align: center;
   width: 92%;

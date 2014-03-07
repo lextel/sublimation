@@ -908,9 +908,9 @@ legend, .ui-input-text input, .ui-input-search input {
 
 .ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
     display: block;
-    width: 18px;
-    height: 18px;
-    margin:-10px 2px 0 1px
+    width: 19px;
+    height: 19px;
+    margin:-11px 2px 0 -2px
 }
 
 /*.ui-checkbox-off:after, .ui-btn.ui-radio-off:after {
