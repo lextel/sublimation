@@ -32,8 +32,13 @@ Route::group(['prefix' => 'api/'], function() {
     Route::post('signup', 'UserController@signUp');
     Route::get('signout', 'UserController@signOut');
     
+    
 });
 
+Route::group(['prefix' => 'api/u/'], function() {
+    //我的中心
+    Route::get('/', ['as'=>'index', 'uses'=>'UserIndexController@index']);
+});
 
 //临时代码
 Route::get('api/users', function()
