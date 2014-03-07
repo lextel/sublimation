@@ -21,7 +21,7 @@
         </a>
     </div>
     <div role="main" class="ui-content">
-        <form action="signin" id="loginForm" class="loginForm" method="post">
+        <form action="api/signin" id="loginForm" class="loginForm" method="post">
             <div class="fieldcontain">
                 <label for="name"></label>
                 <input id="username" name="username" class="username" placeholder="请输入您的邮箱" type="text">
@@ -32,12 +32,13 @@
                 <span class="icon-key icon-position"></span>
             </div>
             <div data-role="controlgroup">
-                <a href="" data-role="button" class="btn-theme-a submit">登录</a>
+                <!--<a href="javascript:;" data-role="button" class="btn-theme-a submit">登录</a>-->
+                <button data-role="submit" class="btn-theme-a submit">登录</button>
             </div>
         </form>
     </div>
     <div data-role="footer">
-        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="#register" data-transition="slide">新用户注册</a></span>
+        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="signup" data-transition="slide">新用户注册</a></span>
         <div class="else-login">
             <div class="title">使用合作方账号登录</div>
             <ul>
@@ -48,55 +49,6 @@
         </div>
     </div>
     <div class="tooltip">提示信息!</div>
-</div>
-<!--注册-->
-<div data-role="page" id="register">
-    <div data-role="header" class="hd-theme-b">
-        <h1>登录</h1>
-        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
-            <span class="icon-arrow-left"></span>
-        </a>
-    </div>
-    <div role="main" class="ui-content">
-        <form action="" id="registerForm" class="loginForm" method="post">
-            <div class="fieldcontain">
-                <label for="name"></label>
-                <input  name="name" class="username" placeholder="请输入您的邮箱" type="text">
-                <span class="icon-user icon-position"></span>
-            </div>
-            <div class="fieldcontain">
-                <input  name="password" class="password" value="" placeholder="请输入您密码" type="password">
-                <span class="icon-key icon-position"></span>
-            </div>
-            <div class="fieldcontain">
-                <input  name="password" class="password" value="" placeholder="请输入您的昵称(8个字符以内)" type="text">
-                <span class="icon-user icon-position"></span>
-            </div>
-            <div data-role="controlgroup">
-                <a href="" data-role="button" class="btn-theme-a">登录</a>
-            </div>
-            <div class="fieldcontain">
-                <label class="agree-bar">
-                    <input type="checkbox" name="checkbox-0 " data-cacheval="true">我已阅读并同意
-                    <a href="#agree" data-transition="slide">《乐乐淘服务协议》</a>
-                </label>
-            </div>
-        </form>
-    </div>
-</div>
-<!--用户协议-->
-<div data-role="page" id="agree">
-    <div data-role="header" class="hd-theme-b">
-        <h1>服务协议</h1>
-        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
-            <span class="icon-arrow-left"></span>
-        </a>
-    </div>
-    <div role="main" class="ui-content">
-        <div class="agree-wrap">
-
-        </div>
-    </div>
 </div>
 </body>
 </html>

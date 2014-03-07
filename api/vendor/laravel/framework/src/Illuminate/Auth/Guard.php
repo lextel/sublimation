@@ -288,12 +288,13 @@ class Guard {
 	public function attempt(array $credentials = array(), $remember = false, $login = true)
 	{
 		$this->fireAttemptEvent($credentials, $remember, $login);
-
+        
 		$this->lastAttempted = $user = $this->provider->retrieveByCredentials($credentials);
 
 		// If an implementation of UserInterface was returned, we'll ask the provider
 		// to validate the user against the given credentials, and if they are in
 		// fact valid we'll log the users into the application and return true.
+
 		if ($this->hasValidCredentials($user, $credentials))
 		{
 			if ($login) $this->login($user, $remember);
@@ -313,6 +314,7 @@ class Guard {
 	 */
 	protected function hasValidCredentials($user, $credentials)
 	{
+
 		return ! is_null($user) && $this->provider->validateCredentials($user, $credentials);
 	}
 

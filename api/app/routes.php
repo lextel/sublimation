@@ -10,45 +10,36 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
 Route::get('/', function()
-{
-	//return View::make('hello');
-	$crypt = new \Crypt_Base();
-    $crypt->setPassword(1234567);
-	return base64_encode($crypt->key);
+    {
+        return View::make('hello');
+    });
+
+Route::group(['prefix' => 'api/'], function() {
+    Route::get('/', function()
+    {
+        return View::make('hello');
+    });
+
+    Route::get('index', function()
+    {
+        return View::make('hello');
+    });
+    //用户注册\登录功能
+    Route::get('signin', 'UserController@getSignIn');
+    Route::post('signin', 'UserController@signIn');
+    Route::get('signup', 'UserController@getSignUp');
+    Route::post('signup', 'UserController@signUp');
+    Route::get('signout', 'UserController@signOut');
+    
 });
 
-Route::get('/signin', function()
-{
-	return View::make('signin');
-});
 
-Route::post('/signin', function()
-{
-	return Redirect::to('/');
-});
-
-Route::get('/signup', function()
-{
-	return View::make('signup');
-});
-
-Route::post('/signup', function()
-{
-	return Redirect::to('/');
-});
-
-Route::get('/signout', function()
-{
-    Auth::logout();
-	return Redirect::to('/');
-});
-
-Route::get('/users', function()
+//临时代码
+Route::get('api/users', function()
 {
     $users = Member::all();
-	return Response::json([
+    return Response::json([
         'code' => 0,
         'users' => $users->toArray(),
         'msg' => '',

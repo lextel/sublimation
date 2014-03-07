@@ -10,7 +10,7 @@ class Member extends Eloquent  {
 	 */
 	protected $table = 'members';
 	
-	protected $fillable = array('id', 'email');
+	protected $fillable = array('id', 'username', 'password', 'nickname', 'email', 'create_at', 'update_at');
 	
-
+    public $timestamps = true;
 }
