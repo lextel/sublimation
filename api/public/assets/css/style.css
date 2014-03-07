@@ -97,6 +97,8 @@ body{
 }
 .icon-cog:before {
     content: "\e614";
+    font-size: 1.6em;
+    color: #af2812;
 }
 .icon-lock:before {
     content: "\e615";
