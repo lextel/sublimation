@@ -21,23 +21,24 @@
         </a>
     </div>
     <div role="main" class="ui-content">
-        <form action="" id="loginForm" class="loginForm" method="post">
+        <form action="signin" id="loginForm" class="loginForm" method="post">
             <div class="fieldcontain">
                 <label for="name"></label>
-                <input id="name" name="name" class="username" placeholder="请输入您的邮箱" type="text">
-                <span class="icon-user2 icon-position"></span>
+                <input id="username" name="username" class="username" placeholder="请输入您的邮箱" type="text">
+                <span class="icon-user icon-position"></span>
             </div>
             <div class="fieldcontain">
                 <input id="password" name="password" class="password" value="" placeholder="请输入您密码" type="password">
                 <span class="icon-key icon-position"></span>
             </div>
             <div data-role="controlgroup">
-                <a href="" data-role="button" class="btn btn-theme-a">登录</a>
+                <!--<a href="javascript:;" data-role="button" class="btn-theme-a submit">登录</a>-->
+                <button data-role="submit" class="btn-theme-a submit">登录</button>
             </div>
         </form>
     </div>
     <div data-role="footer">
-        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="#register" data-transition="slide">新用户注册</a></span>
+        <span class="inner-bar"><a href="">忘记密码</a><b>|</b><a href="signup" data-transition="slide">新用户注册</a></span>
         <div class="else-login">
             <div class="title">使用合作方账号登录</div>
             <ul>
@@ -47,6 +48,7 @@
             </ul>
         </div>
     </div>
+    <div class="tooltip">提示信息!</div>
 </div>
 </body>
 </html>

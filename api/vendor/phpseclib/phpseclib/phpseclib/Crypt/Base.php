@@ -370,7 +370,7 @@ class Crypt_Base
      * @var String
      * @access private
      */
-    var $password_default_salt = 'phpseclib/salt';
+    var $password_default_salt = 'Th1s=mYcdf3_$@|+';
 
     /**
      * The namespace used by the cipher for its constants.
@@ -562,16 +562,16 @@ class Crypt_Base
         switch ($method) {
             default: // 'pbkdf2'
                 $func_args = func_get_args();
-
+                
                 // Hash function
-                $hash = isset($func_args[2]) ? $func_args[2] : 'sha1';
+                $hash = isset($func_args[2]) ? $func_args[2] : 'sha256';
 
                 // WPA and WPA2 use the SSID as the salt
                 $salt = isset($func_args[3]) ? $func_args[3] : $this->password_default_salt;
 
                 // RFC2898#section-4.2 uses 1,000 iterations by default
                 // WPA and WPA2 use 4,096.
-                $count = isset($func_args[4]) ? $func_args[4] : 1000;
+                $count = isset($func_args[4]) ? $func_args[4] : 10000;
 
                 // Keylength
                 $dkLen = isset($func_args[5]) ? $func_args[5] : $this->password_key_size;
