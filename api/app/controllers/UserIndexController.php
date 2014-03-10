@@ -4,7 +4,7 @@
 //use BaseController;
 class UserIndexController extends BaseController {
     
-    protected function getUnreadCount($memberId){
+    private function getUnreadCount($memberId){
         $count = Sms::where('owner_id', '=', $user->id)->where('status', '=', '0')->count();
         return $count;
     }
@@ -21,7 +21,7 @@ class UserIndexController extends BaseController {
 	               'avatar' => $user->avatar,
 	               'email' => $user->email,
 	               'points' => $user->points,
-	               'unreadcount' => Sms::where('owner_id', '=', $user->id)->where('status', '=', '0')->count()];
+	               'unreadcount' => getUnreadCount($user->id)];
 	       
 	       return Response::json($res);
 	       
