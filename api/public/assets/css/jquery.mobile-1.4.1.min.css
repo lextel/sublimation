@@ -908,9 +908,9 @@ legend, .ui-input-text input, .ui-input-search input {
 
 .ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
     display: block;
-    width: 19px;
-    height: 19px;
-    margin:-11px 2px 0 -2px
+    width: 20px;
+    height: 20px;
+    margin:-11px 2px 0 0px
 }
 
 /*.ui-checkbox-off:after, .ui-btn.ui-radio-off:after {
@@ -1185,7 +1185,6 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 .ui-btn {
     font-size: 16px;
     margin: .5em 0;
-    padding: .7em 1em;
     display: block;
     position: relative;
     text-align: center;
@@ -1298,10 +1297,6 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 .ui-btn-icon-bottom:after {
     top: auto;
     bottom: .5625em
-}
-
-.ui-header .ui-btn-left, .ui-header .ui-btn-right, .ui-btn-left > [class*=ui-], .ui-btn-right > [class*=ui-] {
-    margin: 0
 }
 
 .ui-btn-left, .ui-btn-right {
