@@ -13,8 +13,9 @@
 </head>
 <body>
 <!--侧滑菜单-->
+<!--获得的商品-->
 <div data-role="page">
-    <div data-role="header" class="">
+    <div data-role="header" class="hd-theme-b">
         <h1>获得的商品</h1>
         <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
             <span class="icon-arrow-left"></span>
@@ -27,17 +28,18 @@
                         <a href="#"><img src="../assets/images/meinv.jpg" alt="美女"/></a>
                     </span>
             </div>
-            <div class="info-wrap fl">
+            <div class="info-wrap fr">
                 <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
                 <div class="price">价值：00000.00</div>
-                <div class="number">购买数量：<b class="red">50</b>人次</div>
+                <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
+                <div class="datetime">揭晓时间:2013-12-20 17:00</div>
                 <div class="btn-group">
-                    <a href="" class="btn-pay">查看物流</a>
-                    <a href="" class="btn-pay">查看晒单</a>
+                    <a href="#expressDetail" data-transition="fade" class="btn-pay">查看物流</a>
+                    <a href="" class="btn-pay">去晒单</a>
                 </div>
             </div>
-            <div class="arrow-right fl">
-                <a href=""><span class="icon-uniE600"></span></a>
+            <div class="arrow-right">
+                <a href="#ownedDetail" data-transition="slide"><span class="icon-uniE600"></span></a>
             </div>
         </div>
         <div class="noRecord">
@@ -45,6 +47,58 @@
         </div>
     </div>
 </div>
-
+<!--获得的商品详情-->
+<div data-role="page"id="ownedDetail">
+    <div data-role="header" class="hd-theme-b">
+        <h1>商品详情</h1>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
+            <span class="icon-arrow-left"></span>
+        </a>
+    </div>
+    <div role="main" class="ui-content owned-detail">
+        <div class="item">
+            <div class="img-sm fl">
+                    <span class="img-wide">
+                        <a href="#"><img src="../assets/images/meinv.jpg" alt="美女"/></a>
+                    </span>
+            </div>
+            <div class="info-wrap fr">
+                <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
+                <div class="price">价值：00000.00</div>
+                <div class="gainer">获得者:<b>王尼玛中大奖</b></div>
+                <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
+                <div class="datetime">揭晓时间:2013-12-20 17:00</div>
+            </div>
+            <div class="arrow-right">
+                <a href=""><span class="icon-uniE600"></span></a>
+            </div>
+        </div>
+        <dl class="uckycode-list">
+            <dt>本期你共拥有<s class="red">10</s>个乐拍码</dt>
+            <dd>
+                <div class="row">
+                    <span class="datetime">2013-12-20 17:00</span>
+                    <span class="persontime"><s class="red">1</s>次</span>
+                </div>
+                <div class="row">
+                    <span class="number red">10000078</span>
+                    <span class="number red">10000078</span>
+                    <span class="number red">10000078</span>
+                    <span class="number red">10000078</span>
+                </div>
+            </dd>
+            <dd>
+                <div class="row">
+                    <span class="datetime">2013-12-20 17:00</span>
+                    <span class="persontime"><s class="red">1</s>次</span>
+                </div>
+                <div class="row">
+                    <span class="number red">10000078</span>
+                    <span class="number red">10000078</span>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>
 </body>
 </html>

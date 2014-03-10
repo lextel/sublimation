@@ -30,14 +30,17 @@ if(!preg_match('/^(\d+)x(\d+)$/', $params['size'])) die('size error');
 $originalPath = UPLOAD.DS.$params['type'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
 
 // 目标目录
-$targetPath   = UPLOAD.DS.$params['type'].DS.$params['size'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
+echo $targetPath   = UPLOAD.DS.$params['type'].DS.$params['size'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
 
 // 生成缩略图操作
 if(!file_exists($targetPath)) {
     list($width, $height) = explode('x', $params['size']);
+    
     $thumb = new Imagick();
     $thumb->readImage($originalPath);
     $thumb->resizeImage($width, $height, Imagick::FILTER_LANCZOS,1);
+    $path = dirname($targetPath);
+    checkDir($path);
     $thumb->writeImage($targetPath);
     $thumb->clear();
     $thumb->destroy(); 

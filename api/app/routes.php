@@ -71,8 +71,10 @@ Route::get('users', function()
     );
 });
 
+
 Event::listen('illuminate.query', function($sql)
 {
    Log::info($sql);
 }); 
 
+Route::resource('m', 'ItemController');

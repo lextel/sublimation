@@ -4185,6 +4185,7 @@ textarea.ui-input-text {
 }
 
 textarea.ui-input-text.ui-textinput-autogrow {
+    width: 100%;
     overflow: hidden
 }
 
