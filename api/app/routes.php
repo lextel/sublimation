@@ -38,6 +38,8 @@ Route::group(['prefix' => 'api/'], function() {
 Route::group(['prefix' => 'api/u/'], function() {
     //我的中心
     Route::get('/', ['as'=>'index', 'uses'=>'UserIndexController@index']);
+    //头像修改
+    Route::post('avatar', ['as'=>'avatar', 'uses'=>'UserIndexController@avatar']);
 });
 
 //临时代码
@@ -52,3 +54,4 @@ Route::get('api/users', function()
     );
 });
 
+Route::resource('m', 'ItemController');

@@ -5,7 +5,7 @@
 class UserIndexController extends BaseController {
     
     protected function getUnreadCount($memberId){
-        $count = Sms::where('member_id', '=', $memberId)->count();
+        $count = Sms::where('owner_id', '=', $user->id)->where('status', '=', '0')->count();
         return $count;
     }
     
@@ -26,7 +26,36 @@ class UserIndexController extends BaseController {
 	       return Response::json($res);
 	       
 	    } 
-		return "来测试下";
+		$res = ['code'=>1, 'msg'=>'请登陆'];
+        return Response::json($res);
+	}
+	
+	/*
+	*用户修改头像
+	*
+	*/
+	public function avatar()
+	{
+	    if (! Auth::check()){
+	        $res = ['code'=>1, 'msg'=>'请登陆'];
+            return Response::json($res);
+	    }
+	    $avatar = Input::get('avatar');
+	    $validator = Validator::make(
+        [
+            'avatar' => $avatar
+        ],[
+            'avatar' => 'required',
+        ]);
+        if ($validator->fails()){
+            $res = ['code'=>1, 'msg'=>'图片未输入'];
+            return Response::json($res);
+        }
+	    $user = Auth::getUser();
+	    $user->avatar = $avatar;
+	    $user->save();
+	    $res = ['code'=>0, 'msg'=>'修改头像成功'];
+        return Response::json($res); 
 	}
 
 }
