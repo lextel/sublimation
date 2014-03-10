@@ -45,6 +45,7 @@ a:link {
 }
 .item {
   overflow: hidden;
+  position: relative;
 }
 .money {
   font-size: 0.75em;
@@ -58,6 +59,9 @@ a:link {
 .small {
   color: #666666;
 }
+textarea {
+  border: 1px solid #d2d2d2;
+}
 .number {
   font-size: 0.875em;
   margin-bottom: 0.31em;
@@ -68,6 +72,13 @@ a:link {
   color: #666;
   font-size: 0.875em;
   margin-bottom: 0.312em;
+}
+.gainer b {
+  color: #333333;
+}
+.datetime {
+  overflow: hidden;
+  white-space: nowrap;
 }
 .checkBox-left {
   text-indent: 1.4em;
@@ -90,13 +101,16 @@ a:link {
   font-size: 0.875em;
 }
 .btn-group {
-  text-align: center;
-  padding: 0.3em;
+  overflow: hidden;
 }
 .btn-group .btn-pay {
-  display: inline-block;
-  padding: 0.4em 0.6em;
+  display: block;
+  width: 70px;
+  padding: 0.4em 0 ;
+  text-align: center;
   color: #af2812;
+  float: left;
+  margin-right: 0.4em;
 }
 /*图片*/
 img {
@@ -603,13 +617,11 @@ html .btn-theme-a {
 /*乐拍记录*/
 .record-ward {
   padding: 0;
+  background: #ffffff;
 }
 .record-ward .item {
-  padding: 0.625em;
-  margin: 0.625em;
-  border: 1px solid #eeeeee;
-  background: #ffffff;
-  margin-bottom: 0.625em;
+  padding: 1em;
+  border-bottom: 1px dashed #d2d2d2;
 }
 .record-ward .info-wrap {
   width: 56%;
@@ -633,16 +645,115 @@ html .btn-theme-a {
   padding: 1em;
   border-bottom: 1px dashed #d2d2d2;
 }
-.owned-list .item .info-wrap {
-  margin: 0 0.6em;
+.owned-list .info-wrap {
+  width: 56%;
+}
+.owned-detail {
+  padding: 0;
+}
+.owned-detail .item {
+  padding: 1em;
+  border-bottom: 1px dashed #d2d2d2;
+  border: 0;
+}
+.owned-detail .info-wrap {
+  width: 56%;
+}
+.uckycode-list,
+.express-list {
   overflow: hidden;
-  width: 50%;
+  margin: 0 0.8em 0.8em;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+}
+.uckycode-list dt,
+.express-list dt {
+  padding: 0.8em;
+}
+.uckycode-list dd,
+.express-list dd {
+  padding: 0.8em;
+  border-top: 1px dashed #d2d2d2;
+}
+.uckycode-list dd .datetime {
+  margin-right: 1em;
+}
+.uckycode-list dd span {
+  margin-right: 1em;
+}
+.uckycode-list dd span.number {
+  display: block;
+  float: left;
+}
+.express-list dd .row {
+  margin-left: 1.5em;
+}
+.uckycode-list p,
+.express-list p {
+  margin-bottom: 0.312em ;
 }
 .arrow-right {
-  height: 100%;
-  width: 4%;
-  padding-top: 20%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 40%;
+  right: 0.4em;
 }
 .arrow-right a {
   color: #af2812;
+}
+.bask-list {
+  padding: 0;
+  background: #ffffff;
+}
+.bask-list .item {
+  margin: 1em;
+  padding: 0.6em;
+  border: 1px solid #d2d2d2;
+  position: relative;
+}
+.bask-content {
+  height: 61px;
+  line-height: 22px;
+  overflow: hidden;
+  font-size: 0.875em;
+  margin-bottom: 0.7em;
+}
+.back-img {
+  overflow: hidden;
+}
+.back-img ul li {
+  position: relative;
+  width: 29.5%;
+  margin-right: 0.625em ;
+  float: left;
+  border: 1px solid #d2d2d2;
+}
+.bask-no {
+  padding: 0;
+  background: #ffffff;
+}
+.bask-no .item {
+  padding: 1em;
+  border-bottom: 1px dashed #d2d2d2;
+}
+.bask-no .info-wrap {
+  width: 56%;
+}
+.addForm {
+  padding: 0.8em;
+}
+.addForm input.text {
+  height: 35px;
+  line-height: 35px;
+  text-indent: 1em;
+  border: 1px solid #d2d2d2;
+  width: 100%;
+  margin-bottom: 0.312em;
+}
+.network {
+  width: 260px;
+  height: 170px;
+  margin: 100px auto;
+  background: url("../images/network.png") no-repeat;
 }
