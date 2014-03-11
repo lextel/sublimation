@@ -31,8 +31,7 @@ Route::group(['prefix' => 'api/'], function() {
     Route::get('signup', 'UserController@getSignUp');
     Route::post('signup', 'UserController@signUp');
     Route::get('signout', 'UserController@signOut');
-    
-    
+    Route::controller('m', 'ItemController');
 });
 
 Route::group(['prefix' => 'api/u/'], function() {
@@ -54,4 +53,3 @@ Route::get('api/users', function()
     );
 });
 
-Route::resource('m', 'ItemController');
