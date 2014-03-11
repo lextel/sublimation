@@ -835,6 +835,7 @@ html .btn-theme-a {
   margin-bottom: 0.8em;
 }
 body .ui-table-columntoggle-btn {
+  display: none;
   background-color: #333;
   border-color: #1f1f1f;
   color: #fff;
@@ -847,4 +848,52 @@ body .ui-table-columntoggle-btn {
   border-color: #ddd;
   color: #333;
   text-shadow: 0 1px 0 #f3f3f3;
+}
+/*充值*/
+.payForWrap {
+  padding: 0;
+}
+.payForWrap .title {
+  padding: 0.8em;
+  border-bottom: 1px dashed #D2D2D2;
+  margin-bottom: 0.8em;
+}
+.payForWrap .paying-way {
+  margin: 0.8em;
+}
+.chooseList .ui-radio label.ui-btn {
+  height: 45px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 45px;
+  background: #ffffff;
+  padding: 0;
+  border-radius: 0;
+  border: 2px solid #D2D2D2;
+}
+.chooseList .ui-radio label.ui-btn:after {
+  width: 0;
+  height: 0;
+  border: 0;
+  background: none;
+}
+.chooseList .ui-radio label.ui-radio-on {
+  border: 3px solid #af2812;
+  color: #af2812;
+}
+.chooseList .ui-radio label.ui-radio-on:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+.chooseList .ui-input-text input.text {
+  width: 100%;
+  height: 45px;
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  border: 2px solid #D2D2D2;
 }
