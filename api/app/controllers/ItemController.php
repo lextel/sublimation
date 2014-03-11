@@ -11,7 +11,8 @@ class ItemController extends AppController {
         $footer = View::make('api.index_footer')->render();
         $script = View::make('api.item.script')->render();
 
-        return Response::json(['header' => $header, 'main' => $main, 'footer' => $footer, 'script' => $script]);
+        return Response::json(['header' => $header, 'main' => $main, 'footer' => $footer, 'script' => $script])
+                         ->header('Access-Control-Allow-Origin', '*');
     }
 
     public function getAjaxIndex() {
@@ -19,7 +20,8 @@ class ItemController extends AppController {
 
         $list = View::make('api.item.list')->render();
     
-        return Response::json(['list' => $list]);
+        return Response::json(['list' => $list])
+                         ->header('Access-Control-Allow-Origin', '*');;
     }
 
 }
