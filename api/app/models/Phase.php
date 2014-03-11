@@ -1,7 +1,9 @@
 <?php
 
-class Phase extends Eloquent {
+/*
+*期数表MODEL
+*/
 
-    protected $table = 'Phases';
-
+class Phase extends Eloquent  {
+    protected $table = 'phases';
 }
