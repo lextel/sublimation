@@ -35,8 +35,9 @@ Route::group(['prefix' => '/'], function() {
     Route::get('signup', 'UserController@getSignUp');
     Route::post('signup', 'UserController@signUp');
     Route::get('signout', 'UserController@signOut');
-    
-    
+
+    // 商品列表
+    Route::controller('m', 'ItemController');
 });
 
 Route::group(['prefix' => 'u/'], function() {
@@ -65,10 +66,7 @@ Route::group(['prefix' => 'u/'], function() {
     //
 });
 
-
 Event::listen('illuminate.query', function($sql)
 {
    Log::info($sql);
 }); 
-
-Route::resource('m', 'ItemController');
