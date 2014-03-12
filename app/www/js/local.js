@@ -1,48 +1,77 @@
-SERVER = 'http://192.168.3.10:82';
+SERVER = 'http://www.api.com';
 
 $(function(){
 
-	$('a').click(function() {
-		var target = $(this).attr('href');
-		var tpl = $(this).attr('tpl');
+    $('a').click(function() {
+        var target = $(this).attr('href');
+        var tpl = $(this).attr('tpl');
 
-		target = target.replace('SERVER', SERVER);
+        target = target.replace('SERVER', SERVER);
 
-		console.log(target);
+        console.log(target);
 
-		if(typeof(tpl) != 'undefined' && target != 'javascript:;') {
-			window.location.href='tpl_' + tpl + '.html?url=' + target;
-		}
+        if(typeof(tpl) != 'undefined' && target != 'javascript:;') {
+            window.location.href='tpl_' + tpl + '.html?url=' + target;
+        }
 
-		return false;
-	});
+        return false;
+    });
 
-	render();
+    render();
 });
 
 // 获取参数
 function param(key) {
-	return location.search.split(key+'=')[1];
+    return location.search.split(key+'=')[1];
 }
 
 
 // 渲染页面
 function render() {
-	var url = param('url');
+    var url = param('url');
 
-	$.ajax({
-		url: url,
-		type: 'get',
-		dataType: 'json',
-		success: function(dom) {
-			$('div[data-role="header"]').html(dom.header);
-			$('div[data-role="main"]').html(dom.main);
-			$('div[data-role="footer"]').html(dom.footer);
-			console.log(dom);
-		},
-		error: function() {
-			console.log('request error');
-		}
-	});
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+        if(data.code == 0) {
+            $('div[data-role="header"]').html(data.data.header);
+            $('div[role="main"]').html(data.data.main);
+            $('div[data-role="footer"]').html(data.data.footer);
 
+            // 请求列表
+            if($('div[role="list"]').length > 0) {
+                getList();
+            }
+        } else {
+            alert(data.msg);
+        }
+        },
+        error: function() {
+        alert('请求失败');
+        }
+    });
+}
+
+// 渲染列表
+function getList() {
+    var url = $('div[role="list"]').attr('url');
+
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+            if(data.code == 0) {
+                $('div[role="list"]').html(data.data.list);
+            } else {
+                alert(data.msg);
+            }
+        }
+    });
+}
+
+// 渲染块
+function getBlock() {
 }
