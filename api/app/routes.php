@@ -62,7 +62,13 @@ Route::group(['prefix' => 'u/'], function() {
     //Route::get('');
     Route::get('delpost/{postid}', 'UserPostController@delete');
     //用户地址列表
-    Route::get('address/{pn?}', 'UserAddressController@index');
+    Route::get('address', 'UserAddressController@index');
+    Route::get('setaddress', 'UserAddressController@setDefault');
+    Route::get('address/create', 'UserAddressController@getPage');
+    Route::post('address/create', 'UserAddressController@create');
+    Route::get('address/{id}/edit', '');
+    Route::post('address/{id}/edit', '');
+    Route::get('address/{id}/del', '');
     //
 });
 

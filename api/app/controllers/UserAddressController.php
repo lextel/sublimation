@@ -15,34 +15,38 @@ class UserAddressController extends \BaseController {
 	    return $address;
     }
     
+    
     //获得地址列表页
-    public function index($pn=0)
+    public function index()
     {
         if (! Auth::check()){
 	        $res = ['code'=>1, 'msg'=>'请登陆'];
             return Response::json($res);
 	    }
 	    $user = Auth::getUser();
-	    $count = Address::where('member_id', '', $user->id)
-	                   ->where('is_delete', '=', 0)
-	                   ->count();
-	    $addresses = [];
-	    if ($count > $pn){
-	        $addresses = Address::select('id', 'name', 'mobile', 'rate', 'address')
-	                   ->where('id', '=', $addressId)
-	                   ->where('member_id', '', $user->id)
+	    $addresses = Address::select('id', 'name', 'mobile', 'rate', 'address')
+	                   ->where('member_id', '=', $user->id)
 	                   ->where('is_delete', '=', 0)
 	                   ->orderBy('id', 'desc')
-	                   ->get()->toArray();
+	                   ->get();
+	    
+	    foreach($addresses as &$row){
+	        $row->address = implode(' ', unserialize($row->address));
+	    }	    
+	    return View::make('home/address', ['addresses'=>$addresses]);
+    }
+    //打开页面
+    public function getPage()
+    {
+        if (! Auth::check()){
+	        $res = ['code'=>1, 'msg'=>'请登陆'];
+            return Response::json($res);
 	    }
-	    $data = ['addresses' => $addresses,
-	             'count' => $count];
-	    $res = ['code'=>0, 'msg'=>'OK', 'data'=>$data];
-	    return Response::json($res);
+        return View::make('home/addressadd');
     }
     
     //获得单个地址
-    public function get($adressId)
+    public function get($addressId)
     {
         if (! Auth::check()){
 	        $res = ['code'=>1, 'msg'=>'请登陆'];
@@ -55,9 +59,8 @@ class UserAddressController extends \BaseController {
            $res = ['code'=>1, 'msg'=>'该地址不存在'];
            return Response::json($res);
         }
-        $res = ['code'=>0, 'msg'=>'OK', 'data'=>$address];
-        return Response::json($res);
-    
+        //$res = ['code'=>0, 'msg'=>'OK', 'data'=>$address];
+        return View::make('home/addressmodify', ['address' => $address]);  
     }
     
     //快速设置默认地址
