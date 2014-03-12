@@ -34,7 +34,10 @@ class UserLogController extends BaseController {
                    ->select('id', 'sum', 'created_at')
                    ->get()
                    ->toArray();  
-       }                           
+       }
+       foreach($logs as &$row){
+	         $row['created_at'] = date("Y-m-d H:i:s", $row['created_at']);
+	   }                           
        $data = ['logs'=>$logs,
                 'buy_sum'=>Moneylog::sumOfType(1, $userId),
                 'money_sum'=>Moneylog::sumOfType(0, $userId),
@@ -61,7 +64,9 @@ class UserLogController extends BaseController {
                  ->get()
                  ->toArray();
        }
-                             
+       foreach($logs as &$row){
+	         $row['created_at'] = date("Y-m-d H:i:s", $row['created_at']);
+	   }                         
        $data = ['logs'=>$logs,
                 'buy_sum'=>Moneylog::sumOfType(1, $userId),
                 'money_sum'=>Moneylog::sumOfType(0, $userId),

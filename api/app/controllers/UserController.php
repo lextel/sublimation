@@ -102,12 +102,12 @@ class UserController extends \BaseController {
             return Response::json($res);
         }
 
-        Member::create(array(
+        Member::create([
           'username' => $username,
           'password' => Hash::make($password, ['method'=>'pbkdf2']),   // 生成密码.
           'email' => $username,
           'nickname' => $nickname,
-        ));
+        ]);
 
         $user = User::where('username', '=', $username)->first();
 

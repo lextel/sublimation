@@ -28,12 +28,16 @@ class UserWinController extends BaseController {
 	    $count = Phase::where('member_id', '=', $userId)->count();
 	    $wins = [];
 	    if ($count > $pn){
-	        $wins = Phase::select('id', 'image', 'title', 'phase_id', 'amount', 'code', 'opentime')
+	        $wins = Phase::select('id', 'image', 'title', 'phase_id', 'amount', 'code', 'opentime', 'post_id')
 	            ->where('member_id', '=',$userId)
 	            ->orderBy('id', 'desc')
 	            ->take($this->page_size)
 	            ->skip($pn)
 	            ->get()->toArray();
+	    }
+	    
+	    foreach($wins as &$row){
+	         $row['opentime'] = date("Y-m-d H:i", $row['opentime']);
 	    }
 	    $data = ['wins'=>$wins, 'count'=>$count];
 	    $res = ['code'=>0,'msg'=>'OK', 'data'=>$data];

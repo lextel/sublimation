@@ -11,6 +11,8 @@
 |
 */
 Route::pattern('pn', '[0-9]+');
+Route::pattern('postid', '[0-9]+');
+Route::pattern('phaseId', '[0-9]+');
 
 Route::get('/', function()
     {
@@ -53,22 +55,14 @@ Route::group(['prefix' => 'u/'], function() {
     //用户订单列表
     
     //用户晒单列表
-    
+    Route::get('postlist/', 'UserPostController@getPostPage');
+    Route::get('posts/{pn?}', 'UserPostController@posts');
+    Route::get('noposts/{pn?}', 'UserPostController@noposts');
+    //Route::get('');
+    Route::get('delpost/{postid}', 'UserPostController@delete');
     //用户地址列表
-    
+    Route::get('address/{pn?}', 'UserAddressController@index');
     //
-});
-
-//临时代码
-Route::get('users', function()
-{
-    $users = Member::all();
-    return Response::json([
-        'code' => 0,
-        'users' => $users->toArray(),
-        'msg' => '',
-        200]
-    );
 });
 
 
