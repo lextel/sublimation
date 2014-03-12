@@ -24,7 +24,8 @@ class UserIndexController extends BaseController {
 	               'points' => $user->points,
 	               'unreadcount' => $this->getUnreadCount($user->id)];
 	       
-	       return Response::json($res);
+	       //return Response::json($res);
+	       return View::make('home/index', ['res'=>$res]);
 	       
 	    } 
 		$res = ['code'=>1, 'msg'=>'请登陆'];

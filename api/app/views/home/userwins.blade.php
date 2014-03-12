@@ -13,12 +13,12 @@
     <script>
     var pn = 0;
     $(document).on('pageinit', '#home', function(){
-        var url = "http://www.llt.com:81/u/userwinlist/20";
+        var url = "http://www.llt.com:81/u/wins/10";
         getAjaxData(url, userwins);
     });
     $(document).on('vclick', '#more', function(){
         pn += 10;
-        var url = "http://www.llt.com:81/u/userwinlist/" + pn;
+        var url = "http://www.llt.com:81/u/wins/" + pn;
         getAjaxData(url, userwins);
     });
     function getAjaxData(url, func){

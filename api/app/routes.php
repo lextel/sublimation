@@ -50,9 +50,9 @@ Route::group(['prefix' => 'u/'], function() {
     Route::get('buylog/{pn?}', ['as'=>'buylog', 'uses'=>'UserLogController@buylog']);
     Route::get('moneylog/{pn?}', ['as'=>'moneylog', 'uses'=>'UserLogController@moneylog']);
     //用户获得的商品
-    Route::get('userwin', 'UserWinController@userwin');
-    Route::get('userwinlist/{pn?}', 'UserWinController@userwinlist');
-    Route::get('usershipping/{phaseId?}', 'UserWinController@shippingInfo');
+    Route::get('winlist', 'UserWinController@userwin');
+    Route::get('wins/{pn?}', 'UserWinController@userwinlist');
+    Route::get('shipping/{phaseId?}', 'UserWinController@shippingInfo');
     //用户订单列表
     
     //用户晒单列表

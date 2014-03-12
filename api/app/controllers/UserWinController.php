@@ -14,7 +14,7 @@ class UserWinController extends BaseController {
             return Response::json($res);
 	    }
 	    $title = '获得的商品';
-	    return View::make('userwins');
+	    return View::make('home/userwins');
     }
     //用户获得的商品数据接口
     public function userwinlist($pn=0)

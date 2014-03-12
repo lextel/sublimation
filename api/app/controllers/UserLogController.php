@@ -15,7 +15,7 @@ class UserLogController extends BaseController {
             return Response::json($res);
 	    }
 	    $user = Auth::getUser();
-	    return View::make('');
+	    return View::make('home/userlog');
     }
     
     //消费列表
