@@ -48,10 +48,11 @@
        $.each(result.data.wins, function(i, row) {
                         var text = '<div class="item">';
                         text +=        '<div class="img-sm fl"><span class="img-wide"><a href="#"><img src="http://192.168.3.10/'+row.image+'" alt="美女" /></a></span></div>';
-                        text +=        '<div class="info-wrap fl">';
-                        text +=            '<div class="title">'+'（第'+row.phase_id+'期）'+row.title+'</div>';
+                        text +=        '<div class="info-wrap fr">';
+                        text +=            '<div class="title">'+'( 第'+row.phase_id+'期 ) '+row.title+'</div>';
                         text +=            '<div class="price">价值：'+row.amount+'.00</div>';
-                        text +=            '<div class="number">购买数量：<b class="red">50</b>人次</div>';
+                        text +=            '<div class="luckycode">幸运乐拍码:<s class="red">'+row.code+'</s></div>';
+                        text +=            '<div class="datetime">揭晓时间:'+row.opentime+'</div>';
                         text +=            '<div class="btn-group">';
                         text +=                '<a href="" class="btn-pay">查看物流</a>';
                         text +=                '<a href="" class="btn-pay">查看晒单</a>';
