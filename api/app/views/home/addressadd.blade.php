@@ -10,12 +10,18 @@
     <link rel="stylesheet" href="/assets/css/common.css"/>
     <script src="/assets/js/jquery-1.10.1.min.js"></script>
     <script src="/assets/js/jquery.mobile-1.4.1.min.js"></script>
+    <script>
+        $(document).on('vclick', '.add-address', function(){
+            alert(11);
+            $(".addForm").submit();
+        });
+    </script>
 </head>
 <body>
 <!--添加地址-->
 <div data-role="page" id="addAddress">
     <div data-role="header" class="hd-theme-b">
-        <h1>添加地址</h1>
+        <h1>添加收货地址</h1>
         <a data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
             <span class="icon-arrow-left"></span>
         </a>
@@ -41,7 +47,7 @@
         </form>
     </div>
     <div data-role="footer" class="ui-footer ui-bar-inherit" role="contentinfo">
-        <div class="pay-box"><a href="" class="btn-pay-for ui-link">保存</a></div>
+        <div class="pay-box"><a href="" class="btn-pay-for ui-link add-address">保存</a></div>
     </div>
 </div>
 </body>
