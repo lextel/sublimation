@@ -35,21 +35,21 @@ function render() {
         type: 'get',
         dataType: 'json',
         success: function(data) {
-        if(data.code == 0) {
-            $('div[data-role="header"]').html(data.data.header);
-            $('div[role="main"]').html(data.data.main);
-            $('div[data-role="footer"]').html(data.data.footer);
+            if(data.code == 0) {
+                $('div[data-role="header"]').html(data.data.header);
+                $('div[role="main"]').html(data.data.main);
+                $('div[data-role="footer"]').html(data.data.footer);
 
-            // 请求列表
-            if($('div[role="list"]').length > 0) {
-                getList();
+                // 请求列表
+                if($('div[role="list"]').length > 0) {
+                    getList();
+                }
+            } else {
+                alert(data.msg);
             }
-        } else {
-            alert(data.msg);
-        }
         },
         error: function() {
-        alert('请求失败');
+            alert('请求失败');
         }
     });
 }

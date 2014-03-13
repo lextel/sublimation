@@ -33,11 +33,11 @@
                         <div class="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $item['joined']/$item['amount'] * 100; ?>%;"></div>
                     </div>
                     <div class="row number-wrap">
-                        <span class="fl"><?php echo $item['amount']; ?></span>
+                        <span class="fl"><?php echo $item['joined']; ?></span>
                         <span class="fr"><?php echo $item['remain']; ?></span>
                     </div>
                     <div class="row word-wrap">
-                        <span class="fl">总人次</span>
+                        <span class="fl">已参与人次</span>
                         <span class="fr">剩余人次</span>
                     </div>
                 </div>

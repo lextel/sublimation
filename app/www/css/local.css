@@ -8,6 +8,14 @@ div
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
+.ui-content {
+    background-color: #fff;
+    padding:0;
+}
+
+.item {
+    border: 0.12em solid #ccc;
+}
 
 .logoHeader{
 	text-align: center;
