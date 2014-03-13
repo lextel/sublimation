@@ -25,16 +25,19 @@
         <div class="item active">
             <div class="item-hd">
                 <div class="username">{{$row->name}} <s class="red">{{$row->mobile}}</s></div>
-                <p>{{$row->address}}</p>
+                <p>{{$row->address."我来了我来了我来了我来了我来了我来到了"}}</p>
                 @if($row->rate == 100)
                 <s class="icon-checkmark"></s>
                 @endif
+                
             </div>
             <div class="btn-menu">
-                <a href="{{ URL::to('u/address/1/del') }}">删除</a>
-                <a href="{{ URL::to('u/address/1/edit') }}">编辑</a>
-                <a href="{{ URL::to('u/address/1/set') }}">设为默认地址</a>
+                <a href="{{ URL::to('u/address/'.$row->id.'/del') }}">删除</a>
+                <a href="{{ URL::to('u/address/'.$row->id.'/edit') }}">编辑</a>
+                <!--删除需要设置-->
+                <a href="{{ URL::to('u/address/'.$row->id.'/set') }}">设为默认地址</a>
             </div>
+            
         </div>
         @endforeach
         <a class="btn-address" href="{{ URL::to('u/address/create') }}" data-transition="fade" >添加收货地址</a>

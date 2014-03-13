@@ -39,7 +39,7 @@
                 <li><a href="/u/winlist">获得的商品<s>{{ $res['unreadcount'] }}</s><i class="icon-uniE600 fr"></i></a></li>
                 <li><a href="">我的晒单<s>{{ $res['unreadcount'] }}</s><i class="icon-uniE600 fr"></i></a></li>
                 <li><a href="/u/log">账户明细<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="/u/address">收货地址管理<i class="icon-uniE600 fr"></i></a></li>
+                <li><a href="/u/addresses">收货地址管理<i class="icon-uniE600 fr"></i></a></li>
             </ul>
         </div>
     </div>
