@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="../assets/css/jquery.mobile-1.4.1.min.css"/>
     <link rel="stylesheet" href="../assets/css/style.css"/>
     <link rel="stylesheet" href="../assets/css/common.css"/>
-    <script src="../assets/js/jquery-1.10.1.min.js"></script>
-    <script src="../assets/js/jquery.mobile-1.4.1.min.js"></script>
+
+    <script src="<?php echo Asset::js('assets/js/jquery-1.10.1.min.js'); ?>"></script>
+    <script src="<?php echo Asset::js('assets/js/jquery.mobile-1.4.1.min.js'); ?>"></script>
+    <script src="<?php echo Asset::js('assets/js/jquery.validate.min.js'); ?>"></script>
+    <script src="<?php echo Asset::js('assets/js/additional-methods.min.js'); ?>"></script>
+    <script src="<?php echo Asset::js('assets/js/common.js'); ?>"></script>
+    <script src="<?php echo Asset::js('assets/js/login/login.js'); ?>"></script>
+
+
 </head>
 <body>
 <!--登录-->
