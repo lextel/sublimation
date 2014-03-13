@@ -1,4 +1,4 @@
-SERVER = 'http://www.api.com';
+SERVER = 'http://www.llt.com:81';
 
 $(function(){
 
