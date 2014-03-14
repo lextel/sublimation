@@ -841,12 +841,6 @@ legend, .ui-input-text input, .ui-input-search input {
     background-color: rgba(0, 0, 0, .04)
 }
 
-.ui-btn, label.ui-btn {
-    font-weight: 700;
-    border-width: 0.06em;
-    border-style: solid
-}
-
 .ui-btn:link {
     text-decoration: none !important
 }
@@ -1183,7 +1177,7 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 }
 
 .ui-btn {
-    font-size: 16px;
+    font-size:1em;
     margin: .5em 0;
     display: block;
     position: relative;
@@ -1215,7 +1209,6 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 }
 
 .ui-header .ui-btn, .ui-footer .ui-btn {
-    font-size: 12.5px;
     display: inline-block;
     vertical-align: middle
 }
@@ -2714,6 +2707,9 @@ ul.ui-grid-a, ul.ui-grid-b, ul.ui-grid-c, ul.ui-grid-d, ul.ui-grid-solo, li.ui-b
 .ui-navbar {
     max-width: 100%
 }
+.ui-navbar  li a{
+    color: #333333;
+}
 
 .ui-navbar ul:before, .ui-navbar ul:after {
     content: "";
@@ -2930,7 +2926,7 @@ ul.ui-grid-a, ul.ui-grid-b, ul.ui-grid-c, ul.ui-grid-d, ul.ui-grid-solo, li.ui-b
 
 .ui-controlgroup, fieldset.ui-controlgroup {
     padding: 0;
-    margin: .5em 0
+    /*margin: .5em 0*/
 }
 
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup {
@@ -4671,5 +4667,4 @@ textarea.ui-input-text.ui-textinput-autogrow {
 
 .ui-tabs {
     position: relative;
-    padding: .2em
 }
