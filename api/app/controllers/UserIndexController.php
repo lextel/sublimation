@@ -4,7 +4,8 @@
 //use BaseController;
 class UserIndexController extends BaseController {
     
-    protected function getUnreadCount($memberId){
+    private function getUnreadCount($memberId){
+        $user = $user = Auth::getUser();
         $count = Sms::where('owner_id', '=', $user->id)->where('status', '=', '0')->count();
         return $count;
     }
@@ -21,9 +22,10 @@ class UserIndexController extends BaseController {
 	               'avatar' => $user->avatar,
 	               'email' => $user->email,
 	               'points' => $user->points,
-	               'unreadcount' => Sms::where('owner_id', '=', $user->id)->where('status', '=', '0')->count()];
+	               'unreadcount' => $this->getUnreadCount($user->id)];
 	       
-	       return Response::json($res);
+	       //return Response::json($res);
+	       return View::make('home/index', ['res'=>$res]);
 	       
 	    } 
 		$res = ['code'=>1, 'msg'=>'请登陆'];

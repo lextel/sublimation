@@ -17,6 +17,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+  app_path().'/classes',
 
 ));
 
@@ -32,6 +33,7 @@ ClassLoader::addDirectories(array(
 */
 
 Log::useFiles(storage_path().'/logs/laravel.log');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -77,5 +79,6 @@ App::down(function()
 | definitions instead of putting them all in the main routes file.
 |
 */
+
 
 require app_path().'/filters.php';

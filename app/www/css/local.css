@@ -1,0 +1,32 @@
+div
+{
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari /
+    -moz-backface-visibility:hidden; / Firefox */
+}
+
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+.ui-content {
+    background-color: #fff;
+    padding:0;
+}
+
+.item {
+    border: 0.12em solid #ccc;
+}
+
+.logoHeader{
+	text-align: center;
+	background-color: #af2812;
+}
+
+.titileHeader {
+	background-color: #f5f7fa;
+}
+
+.bottomNav{
+	background-color: #af2812;
+	height:59px;
+}
