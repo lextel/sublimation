@@ -23,18 +23,34 @@
     <div role="main" class="ui-content addressWrap">
         <div class="item">
             <div class="item-hd">
-                <div class="username">王尼玛 <s class="red">18465465465</s></div>
+                <div class="username">王尼玛 <b class="red">18465465465</b></div>
                 <p>广东省 深圳市 南山区 xxx路xx号</p>
             </div>
-            <div class="btn-menu">
-                <a href="">删除</a>
-                <a href="">编辑</a>
-                <a href="">设为默认地址</a>
+            <div data-role="navbar" class="btn-menu">
+                <ul>
+                    <li>
+                        <a href="#popupDialog" data-rel="popup"  data-position-to="window" data-transition="pop">
+                            <s class="icon-remove"></s>删除
+                        </a>
+                        <div class="modal-wide" data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+                            <div></div>
+                            <div role="main" class="ui-content">
+                                <h4 class="ui-title"><span class="icon-spam"></span>确定要删除?</h4>
+                            </div>
+                            <div data-role="footer">
+                                <a href="#" class="btn-modal btn-cancel" data-rel="back">取消</a>
+                                <a href="#" class="btn-modal btn-danger" data-rel="back" data-transition="flow">确定</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href=""><s class="icon-pen"></s>编辑</a></li>
+                    <li><a href=""><s class="icon-location"></s>设为默认地址</a></li>
+                </ul>
             </div>
         </div>
         <div class="item active">
             <div class="item-hd">
-                <div class="username">王尼玛 <s class="red">18465465465</s></div>
+                <div class="username">王尼玛 <b class="red">18465465465</b></div>
                 <p>广东省 深圳市 南山区 xxx路xx号</p>
                 <s class="icon-checkmark"></s>
             </div>
@@ -68,8 +84,10 @@
             <label for="checkbox-0">设为默认地址</label>
         </form>
     </div>
-    <div data-role="footer" class="ui-footer ui-bar-inherit" role="contentinfo">
-        <div class="pay-box"><a href="" class="btn-pay-for ui-link">保存</a></div>
+    <div data-role="footer" class="ui-footer fd-theme ui-footer-fixed">
+        <div class="btn-wrap">
+            <a href="" class="btn-lg btn-danger ui-btn">保存</a>
+        </div>
     </div>
 </div>
 </body>

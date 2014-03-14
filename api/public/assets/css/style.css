@@ -5,11 +5,11 @@ body{
 }
 @font-face {
     font-family: 'icomoon';
-    src:url('../fonts/icomoon.eot?-krmu68');
-    src:url('../fonts/icomoon.eot?#iefix-krmu68') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?-krmu68') format('woff'),
-    url('../fonts/icomoon.ttf?-krmu68') format('truetype'),
-    url('../fonts/icomoon.svg?-krmu68#icomoon') format('svg');
+    src:url('../fonts/icomoon-my.eot?-krmu68');
+    src:url('../fonts/icomoon-my.eot?#iefix-krmu68') format('embedded-opentype'),
+    url('../fonts/icomoon-my.woff?-krmu68') format('woff'),
+    url('../fonts/icomoon-my.ttf?-krmu68') format('truetype'),
+    url('../fonts/icomoon-my.svg?-krmu68#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -140,6 +140,16 @@ body{
 .icon-grid2:before {
     content: "\e61f";
 }
+.icon-pen:before {
+    content: "\e620";
+}
+.icon-location:before {
+    content: "\e621";
+}
+.icon-mail:before {
+    content: "\e622";
+}
+
 .icon-arrow-two{
     height: 15px;
     width: 14px;
@@ -159,3 +169,108 @@ body{
  .banner{
      margin: -1em;
  }
+.ui-overlay-b{
+    background: #252525;
+    border-color: #BBB;
+    color: #333;
+    text-shadow: 0 0px 0 #F3F3F3;
+}
+.modal-wide{
+    overflow: hidden;
+}
+.modal-wide .ui-content{
+    background: #f1f1f1;
+}
+.modal-wide .ui-footer{
+    text-align: center;
+    padding: 0.6em;
+    border-top: 1px solid #D2D2D2;
+    background: #f1f1f1;
+}
+.modal-wide h4 .icon-spam{
+    margin:0 0.8em;
+    color: #AF2812;
+}
+.ui-overlay-inherit{
+    background: #000;
+}
+.modal-theme{
+    overflow: hidden;
+    background: #e5e5e5;
+    width: 360px;
+}
+.modal-theme .header{
+    background: #e5e5e5;
+}
+.modal-theme .title{
+    height: 50px;
+    line-height: 50px;
+    color:#AF2812;
+    text-indent: 1.25em;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+.modal-theme .modal-wide{
+    overflow: hidden;
+}
+.modal-wide .ui-radio label.ui-btn{
+    background: #eeeeee;
+    padding: 1em;
+    border-top: 1px dashed #D2D2D2;
+    font-size: 1.215em;
+    font-weight: normal;
+}
+.modal-wide .ui-radio .ui-btn-icon-right:after{
+    width: 16px;
+    height: 16px;
+    background-color: #eeeeee;
+    border: 2px solid #a5a5a5;
+}
+.modal-wide .ui-radio .ui-radio-on:after{
+    background-color: #AF2812;
+}
+.modal-wrap{
+    background: #ffffff;
+    border-radius: 6px;
+}
+.modal-wrap .icon-spam{
+    color: #AF2812;
+}
+.modal-wrap .ui-footer{
+    padding: 0 1em;
+    background:#eeeeee ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

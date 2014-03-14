@@ -20,75 +20,57 @@
             <span class="icon-arrow-left"></span>
         </a>
     </div>
-    <div role="main" class="ui-content bask-no">
-        <div data-role="navbar" class="sort-bar ui-navbar" role="navigation">
-            <ul>
-                <li><a href="" class="ui-btn-active">已晒单(0)</a></li>
-                <li><a href="" class="">未晒单0)</a></li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="img-sm fl">
+    <div role="main" class="ui-content bask-wrap">
+        <div data-role="tabs" id="tabs">
+            <div data-role="navbar" class="sort-bar ui-navbar" role="navigation">
+                <ul>
+                    <li><a href="#one" class="ui-btn-active">未晒单(0)</a></li>
+                    <li><a href="#two" class="">已晒单0)</a></li>
+                </ul>
+            </div>
+            <!--未晒单-->
+            <div id="one" class="noBack-wrap">
+                <div class="item">
+                    <div class="img-sm fl">
                     <span class="img-wide">
                         <a href="#"><img src="../assets/images/meinv.jpg" alt="美女"/></a>
                         <s>剩余00000人次</s>
                     </span>
-            </div>
-            <div class="info-wrap fr">
-                <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
-                <div class="price">价值：00000.00</div>
-                <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
-                <div class="datetime">揭晓时间:2013-12-20 17:09</div>
-                <div class="inner-wide">
-                    <a href="#addBask" data-transition="fade" class="btn-pay fr">去晒单</a>
+                    </div>
+                    <div class="info-wrap fr">
+                        <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
+                        <div class="price">价值：00000.00</div>
+                        <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
+                        <div class="datetime">揭晓时间:2013-12-20 17:09</div>
+                        <div class="inner-wide">
+                            <a href="#addBask" data-transition="fade" class="btn-md btn-white fr">去晒单</a>
+                        </div>
+                    </div>
+                    <div class="arrow-right">
+                        <a href=""><span class="icon-uniE600"></span></a>
+                    </div>
                 </div>
             </div>
-            <div class="arrow-right">
-                <a href=""><span class="icon-uniE600"></span></a>
-            </div>
-        </div>
-        <div class="noRecord">
-            <span class="icon-spam"></span>暂时没有记录
-        </div>
-    </div>
-</div>
-<!--已晒单-->
-<div data-role="page">
-    <div data-role="header" class="">
-        <h1>我的晒单</h1>
-        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
-            <span class="icon-arrow-left"></span>
-        </a>
-    </div>
-    <div role="main" class="ui-content bask-list">
-        <div data-role="navbar" class="sort-bar ui-navbar" role="navigation">
-            <ul>
-                <li><a href="" class="ui-btn-active">已晒单(0)</a></li>
-                <li><a href="" class="">未晒单0)</a></li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="info-wrap fl">
-                <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
-                <p style="font-size: 0.875em;color: #999999">第2期晒单  今天12.30</p>
-                <div class="bask-content">
-                    自Iphone和Android这两个牛逼的手机操作系统发布以来，在互联网界从此就多了一个新的名词-WebApp(意为基于WEB形式的应用程序，运行在高端的移动终端设备。
-                    我相信各位童鞋应该和我一个样子，到处查找贴子，学习如何制作WebApp项目，经过我一番查找资料学习后准备分享给大
-                </div>
-                <div class="back-img">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+            <!--已晒单-->
+            <div id="two" class="show-wrap">
+                <div class="item">
+                        <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
+                        <p style="font-size: 0.75em;color: #999999">第2期晒单  今天12.30</p>
+                        <div class="bask-content">
+                            自Iphone和Android这两个牛逼的手机操作系统发布以来，在互联网界从此就多了一个新的名词-WebApp(意为基于WEB形式的应用程序，运行在高端的移动终端设备。
+                            我相信各位童鞋应该和我一个样子，到处查找贴子，学习如何制作WebApp项目，经过我一番查找资料学习后准备分享给大
+                        </div>
+                        <article class="back-picture">
+                            <section><img src="../assets/images/meinv.jpg" alt="美女"/></section>
+                            <section><img src="../assets/images/meinv.jpg" alt="美女"/></section>
+                            <section><img src="../assets/images/meinv.jpg" alt="美女"/></section>
+                            <section><img src="../assets/images/meinv.jpg" alt="美女"/></section>
+                        </article>
                 </div>
             </div>
-            <div class="arrow-right fl">
-                <a href=""><span class="icon-uniE600"></span></a>
+            <div class="noRecord">
+                <span class="icon-spam"></span>暂时没有记录
             </div>
-        </div>
-        <div class="noRecord">
-            <span class="icon-spam"></span>暂时没有记录
         </div>
     </div>
 </div>
