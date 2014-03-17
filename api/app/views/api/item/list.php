@@ -6,7 +6,7 @@
     ?>
     <div class="item">
         <div class="img-md fl">
-            <span class="img-wide"><a href="" class="ui-link"><img src="<?php echo URL::to('http://www.llt.com/image/400x400/'.$item['image'])?>" alt="<?php echo $item['title']; ?>"></a></span>
+            <span class="img-wide"><a href="" class="ui-link"><img src="<?php echo URL::to('http://192.168.3.10/image/400x400/'.$item['image'])?>" alt="<?php echo $item['title']; ?>"></a></span>
         </div>
         <div class="info-wrap fr">
             <div class="title"><?php echo $item['title']; ?></div>
@@ -40,6 +40,6 @@
     </div>
     <?php
     else:
-    echo '没有商品';
+    echo '<div class="noitem">没有商品</div>';
     endif;
     ?>

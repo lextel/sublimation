@@ -13,31 +13,115 @@
 </head>
 <body>
 <!--设置-->
-<div data-role="page"id="ownedDetail">
+<div data-role="page"id="userSet">
     <div data-role="header" class="hd-theme-b">
-        <h1>商品详情</h1>
-        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
+        <h1>设置</h1>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn ui-btn-icon-notext" data-role="button">
             <span class="icon-arrow-left"></span>
+        </a>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-right ui-btn btn-cancel btn-xs" data-role="button">
+            退出
         </a>
     </div>
     <div role="main" class="ui-content">
         <div class="link-menu">
             <ul>
-                <li><a href="" class="ui-link">个人资料 <i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">获得的商品<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">密码安全<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">帮助中心<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">意见反馈<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">客服热线 400-122-124<s>0</s><i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">清除缓存<small>5.55M</small><i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">版本更新<small>当前版本：V10</small><i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">关于我们<i class="icon-uniE600 fr"></i></a></li>
-                <li><a href="" class="ui-link">服务协议<i class="icon-uniE600 fr"></i></a></li>
+                <li><a href="">个人资料 <span class="icon-uniE600 fr"></span></a></li>
+                <li><a href="#userPwd" data-transition="slide">密码安全 <span class="icon-uniE600 fr"></span></a></li>
+            </ul>
+            <ul>
+                <li><a href="#userHelp" data-transition="slide">帮助中心 <span class="icon-uniE600 fr"></span></a></li>
+                <li><a href="" data-prefetch="true">意见反馈 <span class="icon-uniE600 fr"></span></a></li>
+                <li>
+                    <a href="#popupPhone" data-rel="popup" data-position-to="window" data-transition="pop">
+                        客服热线 400-122-124 <span class="icon-uniE600 fr"></span>
+                    </a>
+                    <div data-role="popup" class="modal-wrap" id="popupPhone"  data-dismissible="false" style="max-width: 400px;">
+                        <div data-role="main" class="ui-content">
+                            <p>拨打<s>400-122-124</s>联系客服</p>
+                            <p>(周一至周五 9:00-18:00)</p>
+                        </div>
+                        <div data-role="footer">
+                            <a href="#" class="btn-sm btn-cancel" data-rel="back">取消</a>
+                            <a href="#" class="btn-sm btn-danger" data-rel="back">拨号</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="">清除缓存<small>5.55M</small> <span class="icon-uniE600 fr"></span></a></li>
+                <li>
+                    <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop">
+                        版本更新<small>当前版本：V10</small><b class="prompt">!</b><span class="icon-uniE600 fr"></span>
+                    </a>
+                    <div data-role="popup" class="modal-wrap" id="popupDialog"  data-dismissible="false" style="max-width: 400px;">
+                        <div data-role="main" class="ui-content">
+                            <h3><span class="icon-spam"></span>系统检测到新版本!<br/>是否更新？</h3>
+                        </div>
+                        <div data-role="footer">
+                            <a href="#" class="btn-sm btn-cancel" data-rel="back">取消</a>
+                            <a href="#" class="btn-sm btn-danger" data-rel="back">确定</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="">关于我们 <span class="icon-uniE600 fr"></span></a></li>
+                <li><a href="">服务协议 <span class="icon-uniE600 fr"></span></a></li>
             </ul>
         </div>
     </div>
-    <div data-role="footer" class="ui-footer ui-bar-inherit" role="contentinfo">
-        <div class="pay-box"><a href="" class="btn-pay-for ui-link">退出登录</a></div>
+</div>
+<!--帮助中心-->
+<div data-role="page" id="userHelp">
+    <div data-role="header" class="hd-theme-b">
+        <h1>帮助中心</h1>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn ui-btn-icon-notext" data-role="button">
+            <span class="icon-arrow-left"></span>
+        </a>
+
+    </div>
+    <div role="main" class="ui-content">
+        <div class="helpWarp" data-role="collapsibleset">
+            <div data-role="collapsible" data-iconpos="right">
+                <h3>1.什么是乐拍</h3>
+                <p>文案还在规划中，请继续关注</p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right">
+                <h3>2.乐拍的规则是什么</h3>
+                <p>文案还在规划中，请继续关注</p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right">
+                <h3>3.乐拍的流程是怎么样的</h3>
+                <p>文案还在规划中，请继续关注</p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right">
+                <h3>4.乐拍的规则是什么</h3>
+                <p>文案还在规划中，请继续关注</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--重置密码-->
+<div data-role="page" id="userPwd">
+    <div data-role="header" class="hd-theme-b">
+        <h1>重置密码</h1>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn ui-btn-icon-notext" data-role="button">
+            <span class="icon-arrow-left"></span>
+        </a>
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-right ui-btn btn-save btn-xs" data-role="button">
+            保存
+        </a>
+    </div>
+    <div role="main" class="ui-content PwdWarp ">
+        <form action="" id="updateForm" class="updateForm" method="post">
+             <label for="oname">原密码</label>
+             <input id="oname" name="oname" class="text"  type="text">
+             <label for="oname">新密码</label>
+             <input id="password" name="password" class="text"  type="password">
+            <label for="spassword">确认密码</label>
+            <input id="spassword" name="spassword" class="text" type="password">
+        </form>
     </div>
 </div>
 </body>
