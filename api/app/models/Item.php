@@ -32,4 +32,24 @@ class Item extends Eloquent {
                      ->toArray();
     }
 
+    /**
+     * 渲染购物车
+     *
+     * return array
+     */
+    public function cart() {
+        $cartItems = Cart::content();
+
+        $items = [];
+        foreach($cartItems as $item) {
+            $phase = Phase::find($item->id)->toArray();
+            $phase['rowId'] = $item->rowid;
+            $phase['qty'] = $item->qty;
+
+            $items[] = $phase;
+        }
+
+        return $items;
+    }
+
 }
