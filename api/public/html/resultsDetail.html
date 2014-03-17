@@ -14,12 +14,12 @@
 <body>
 <!--侧滑菜单-->
 <div data-role="page">
-    <div data-role="header">
-        <h1>商品详情</h1>
+    <div data-role="header" class="hd-theme-b">
+        <h1>揭晓详情</h1>
         <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
             <span class="icon-arrow-left"></span>
         </a>
-        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-right ui-btn  ui-btn-icon-notext" data-role="button">
+        <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-right  ui-btn" data-role="button" role="button">
             <span class="icon-share"></span>
         </a>
         <div data-role="navbar" class="period-nav" role="navigation">
@@ -32,22 +32,63 @@
         </div>
     </div>
     <div role="main" class="ui-content">
+        <!--倒计时-->
+        <div class="countdown">
+            <ul>
+                <li class="title"></li>
+                <li class="count">00</li>
+                <li class="symbol">:</li>
+                <li class="count">00</li>
+                <li class="symbol">:</li>
+                <li class="count">00</li>
+            </ul>
+            <div class="count-fd">
+                <div class="luckycode fl">幸运乐拍码:<b class="red">10000078</b></div>
+                <a href="" class="fr btn-xs btn-white">计算详情</a>
+            </div>
+        </div>
+        <div class="countdown">
+            <div class="counting">别着急，计算中，结果马上出来</div>
+            <div class="progress progress-active">
+                <div class="progress-bar" style="width: 100%"></div>
+            </div>
+        </div>
+        <!--揭晓结果-->
+        <div class="resultState red">本期已揭晓!</div>
+        <div class="win-warp">
+            <ul>
+                <li>
+                    <div class="img-wide">
+                        <a href=""><img src="../assets/images/meinv.jpg" alt=""/></a>
+                        <s class="gainer lucency">本期获奖者</s>
+                    </div>
+                </li>
+                <li>
+                    <div class="row"><div class="datetime">本期乐拍</div></div>
+                    <div class="row"><div class="datetime"><s class="red">30</s><br/>人次</div></div>
+                </li>
+                <li>
+                    <div class="row"><div class="datetime">揭晓时间</div></div>
+                    <div class="row"><s class="datetime">2013-12-0<br/>12:00:00</s></div>
+                </li>
+                <li>
+                    <div class="row"><div class="datetime">乐拍时间</div></div>
+                    <div class="row"><s class="datetime">2013-12-0<br/>12:00:00</s></div>
+                </li>
+            </ul>
+            <div class="win-fd">
+
+            </div>
+        </div>
+        <!--商品信息-->
+        <div class="innerBanner">
+            <div class="img-wide">
+                <a href=""><img src="../assets/images/meinv.jpg" alt=""/></a>
+            </div>
+        </div>
         <div class="info-wrap">
             <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
             <div class="price">价值：00000.00</div>
-            <div class="inner-wide">
-                 <div class="progress">
-                      <div class="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
-                 </div>
-                 <div class="row number-wrap">
-                       <span class="fl">4199</span>
-                       <span class="fr">28</span>
-                 </div>
-                 <div class="row word-wrap">
-                       <span class="fl">总人次</span>
-                       <span class="fr">剩余人次</span>
-                 </div>
-            </div>
             <div class="link-menu">
                 <ul>
                     <li>
@@ -77,26 +118,10 @@
                 </section>
             </article>
             -->
-            <div class="winner-wrap">
-                <div class="img-md fl">
-                    <span class="img-wide"><a href="#" class="ui-link"><img src="../assets/images/meinv.jpg" alt="美女"></a></span>
-                </div>
-                <div class="info-wrap fr">
-                    <div class="gainer">王尼玛中大奖(广东深圳市)</div>
-                    <div class="price">本期乐拍:<s class="red">00</s>人次</div>
-                    <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
-                    <div class="datetime">乐拍时间:2013-12-20 17:00</div>
-                    <div class="datetime">揭晓时间:2013-12-20 17:00</div>
-                </div>
-            </div>
         </div>
     </div>
     <div data-role="footer" data-position="fixed" class="ui-footer-fixed">
-        <article class="fd-btn-group">
-            <section class="sectionOne"><button class="btn-md btn-danger">立即乐拍</button></section>
-            <section class="sectionTwo"><button class="btn-md btn-yellow">加入购物车</button></section>
-            <section class="sectionThree"><div class="cart"><span class="icon-cart"></span><s></s></div></section>
-        </article>
+
     </div>
 </div>
 
