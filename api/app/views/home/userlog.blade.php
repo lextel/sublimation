@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="<?php echo asset('/assets/css/home/jquery.mobile.iscrollview-pull.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/home/demo.css');?>"/>
 
-
     <script src="<?php echo asset('assets/js/jquery-1.10.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/jquery.mobile-1.4.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/common.js');?>"></script>
@@ -38,6 +37,7 @@
 
     <div role="main" class="ui-content addressWrap">
         <div class="title">你当前可用的乐淘币为：<s class="red">0</s><a href="" class="btn-pay fr">去充值</a></div>
+        
         <div  data-role="tabs" id="tabs">
             <div data-role="navbar" class="sort-bar">
                 <ul>
@@ -45,27 +45,25 @@
                     <li><a href="#two" data-ajax="false"><p>充值明细</p><p><small>(消费乐淘币:<s class="red">20</s>)</small></p></a></li>
                 </ul>
             </div>
-            <div id="one" class="item"> 
-                    <div data-iscroll="" data-role="content">
+
+            <div id="one" class="item">
+                    <div id="xp1" data-iscroll="" data-role="content">
                     <table data-role="table" id="table-custom1" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-popup-theme="a" data-column-btn-text="显示列...">
                         <tr class="ui-bar-d">
                             <th>时间</th>
                             <th data-priority="1">乐淘币</th>
                         </tr>
-                        <tr>
-                            <td>2013-12-20 12:00:00</td>
-                            <td><s class="red">10</s></td>
-                        </tr>
                     </table>
 
                     <div class="iscroll-pullup">
-                   <span class="iscroll-pull-icon"></span><span class="iscroll-pull-label" data-iscroll-loading-text="Custom loading text" data-iscroll-pulled-text="Custom pulled text">Custom reset text</span>
-                </div>
+                        <span class="iscroll-pull-icon"></span><span class="iscroll-pull-label" data-iscroll-loading-text="Custom loading text" data-iscroll-pulled-text="Custom pulled text">Custom reset text</span>
+                    </div>
 
-                </div>
+                    </div>
             </div>
 
             <div id="two" class="item">
+                <div id="xp2" data-iscroll="" data-role="content">
                 <table data-role="table" id="table-custom2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="显示列..." data-column-popup-theme="a">
                     <thead>
                     <tr class="ui-bar-d">
@@ -76,14 +74,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th>2013-12-24 10:12：00</th>
-                        <td>支付宝</td>
-                        <td>￥10.00</td>
-                        <td><s class="red">10</s></td>
-                    </tr>
                     </tbody>
                 </table>
+                <div class="iscroll-pullup">
+                        <span class="iscroll-pull-icon"></span><span class="iscroll-pull-label" data-iscroll-loading-text="Custom loading text" data-iscroll-pulled-text="Custom pulled text">Custom reset text</span>
+                </div>
+            </div>
             </div>
         </div>
     </div>
