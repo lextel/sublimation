@@ -38,6 +38,8 @@ Route::group(['prefix' => '/'], function() {
 
     // 商品列表
     Route::controller('m', 'ItemController');
+    // 购物车
+    Route::controller('cart', 'CartController');
 });
 
 Route::group(['prefix' => 'u/'], function() {
