@@ -1,7 +1,7 @@
 @red-color:#af2812;
 @gray-color:#8a8a8a;
 @background:#ffffff;
-@red-bg:#af2812;
+@red-bg: #af2812;
 @fz-14:1.4rem;
 @fz-16:1.6rem;
 @fz-12:1.2rem;
@@ -160,7 +160,7 @@ a.btn-white{
   background-color: #ffffff;
 }
 a.btn-danger,button.btn-danger{
-  background:-webkit-gradient(linear,left top);
+  background:-webkit-gradient(linear,left top,left bottom,from(#D1192E),to(#af2812));
   color:#ffffff;
   border:1px solid #750000;
   box-shadow: 0px 0px 5px 0px #810202;
@@ -278,6 +278,7 @@ a.btn-yellow,button.btn-yellow{
 }
 .product-list .info-wrap{
   width: 56%;
+  margin-left: 0.8em;
   overflow: hidden;
 }
 .inner-wide{
@@ -400,7 +401,7 @@ a.btn-yellow,button.btn-yellow{
   display:block;
   overflow: hidden;
 }
-.sidebar  .menu-img img{
+.sidebar .menu-img img{
   max-height:100%;
   width: auto;
   vertical-align: middle;
@@ -419,6 +420,7 @@ a.btn-yellow,button.btn-yellow{
   margin-bottom: 0.8em;
 }
 .period-nav{
+  border-top: 1px solid #D2D2D2;
   background: #ffffff;
 }
 .period-nav a.ui-link{
@@ -535,6 +537,7 @@ a.btn-yellow,button.btn-yellow{
 .product-list .portrait{
   width: 25%;
   height: auto;
+  border-radius: 5px;
 }
 .product-list .right-box{
   overflow: hidden;
@@ -652,10 +655,6 @@ a.btn-yellow,button.btn-yellow{
       -webkit-transform: scale(1.0);
     }
 }
-.content{
-  background: #ffffff;
-  padding: 0.8em;
-}
 /*揭晓*/
 .countdown{
   overflow: hidden;
@@ -667,11 +666,10 @@ a.btn-yellow,button.btn-yellow{
 .countdown ul{
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: 0.6em;
 }
 .countdown ul li{
    float: left;
-   font-size: @fz-14;
+   font-size:2.5em;
    color: #af2812;
    overflow: hidden;
    height: 50px;
@@ -688,15 +686,6 @@ a.btn-yellow,button.btn-yellow{
   border: 1px solid #D2D2D2;
   text-align: center;
   font-weight: bold;
-}
-.count-fd{
-  overflow: hidden;
-  padding: 0.6em 0 0;
-  border-top: 1px dashed #D2D2D2;
-}
-.count-fd .luckycode{
-  margin-top: 6px;
-  width: 60%;
 }
 .progress-bar {
   float: left;
@@ -732,22 +721,23 @@ a.btn-yellow,button.btn-yellow{
    background: #ffffff;
    margin-bottom: 0.8em;
  }
-.win-warp ul{
-  padding: 0.6em;
-  overflow: hidden;
-}
-.win-warp ul{
+.win-warp .win-bd{
   padding: 0.8em;
   overflow: hidden;
 }
-.win-warp ul li{
+.win-warp .win-fd{
   overflow: hidden;
-  width: 22%;
-  float: left;
-  margin-right: 0.6em;
+  padding: 0.6em 0.8em;
+  border-top: 1px solid #D2D2D2;
+  background: #f1f1f1;
 }
-.win-warp ul li:last-child{
-  margin-right: 0em;
+.win-warp .win-fd .info{
+  width: 70%;
+  margin-top:4px;
+}
+.win-warp .info-wrap{
+  margin-left: 0.8em;
+  width: 64%;
 }
 .lucency{
   margin: 0;
@@ -769,13 +759,12 @@ a.btn-yellow,button.btn-yellow{
   font-size: 1.8rem;
   border: 1px solid #D2D2D2;
   background: #ffffff;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
 }
 .innerBanner{
   overflow: hidden;
   border: 1px solid #D2D2D2;
   background: #ffffff;
-  max-height: 240px;
   padding: 0.8em;
   margin-bottom: 0.8em;
   box-shadow: 0 0 5px 3px #DBDADA;
@@ -827,12 +816,14 @@ a.btn-yellow,button.btn-yellow{
   background: #ffffff;
   border: 1px solid #D2D2D2;
 }
-.content .title{
+.content h4{
   text-align:center;
   padding: 0.4em;
+  background: #eeeeee;
 }
-.content .datetime{
+.content .info{
   text-align:center;
+  background: #eeeeee;
 }
 .content p{
   font-size: @fz-14;
@@ -1166,7 +1157,7 @@ html .btn-theme-a{
   padding:.8em ;
   display: block;
   border: 1px solid #D2D2D2;
-  background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#eee));
+  background:-webkit-gradient(linear,left top,left bottom,from(#fdfdfd),to(#eee));
 }
 .link-menu ul li b{
   margin: 0 5px;
@@ -1257,16 +1248,24 @@ html .btn-theme-a{
   .record-list .info-wrap
 }
 .owned-detail{
-  padding: 0;
+  overflow: hidden;
+  padding: 0.8em;
+  background: #ffffff;
 }
 .owned-detail .item{
-  padding: 0;
+  margin-bottom: 0.8em;
+}
+
+.owned-detail .info-wrap{
+  width: 53%;
+  margin-left: 0.8em;
+}
+.express-list{
+  overflow: hidden;
   background: #ffffff;
-  border: 0;
+  border: 1px solid #d2d2d2;
 }
-.owned-detail  .info-wrap{
-}
-.uckycode-list,.express-list{
+.uckycode-list{
   overflow: hidden;
   margin:0 0.8em 0.8em;
   background: #ffffff;
@@ -1291,9 +1290,6 @@ html .btn-theme-a{
 }
 .express-list dd .row{
   margin-left: 1.5em;
-}
-.uckycode-list p,.express-list p{
-  margin-bottom:0.312em ;
 }
 .arrow-right{
   width: 15px;
