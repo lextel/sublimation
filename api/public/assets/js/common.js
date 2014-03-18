@@ -18,16 +18,3 @@
 	  clearTimeout(interval);  //¹Ø±Õ¶¨Ê±Æ÷
     	}, time);   
 	}
-$(function (){
-        // 邮箱验证   
-      jQuery.validator.addMethod("isEmail", function(value) {
-          var tel = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-          return tel.test(value);
-      }, "is not email");
-         
-      // 手机号码验证
-      jQuery.validator.addMethod("isMoble", function(value) {
-          var tel = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-          return tel.test(value);
-      }, "is not email");
-  });

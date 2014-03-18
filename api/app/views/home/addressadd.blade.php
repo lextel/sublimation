@@ -33,7 +33,26 @@
             <label for="phone">手机号码:</label>
             <input type="text" name="mobile" id="mobile" class="text" placeholder="请输入收货人手机号码">
             <label for="province">省份:</label>
-            <input type="text" name="province" id="province" class="text" placeholder="请选择省份">
+            <input type="text" name="province" id="province" placeholder="请选择省份"
+            data-rel="popup" data-position-to="window" class="text ui-btn ui-corner-all ui-shadow 
+            ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop"/>
+            
+            <div data-role="popup" id="province" data-theme="a" class="ui-corner-all">
+                <form>
+                    <div style="padding:10px 20px;">
+                        <h3>Please sign in</h3>
+                        <label for="un" class="ui-hidden-accessible">Username:</label>
+                        <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
+
+                        <label for="pw" class="ui-hidden-accessible">Password:</label>
+                        <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
+
+                        <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+                    </div>
+                </form>
+            </div>
+
+
             <label for="city">城市:</label>
             <input type="text" name="city" id="city" class="text" placeholder="请选择城市">
             <label for="Region">地区:</label>
@@ -46,7 +65,7 @@
             <label for="checkbox-0">设为默认地址</label>
         </div>
     <div data-role="footer" class="ui-footer ui-bar-inherit" role="contentinfo">
-        <div class="pay-box"><button class="btn-pay-for ui-link add-address">保存</button></div>
+        <div class="pay-box"><button data-role="submit" class="btn-pay-for ui-link add-address">保存</button></div>
     </div>
     </form>
 </div>
