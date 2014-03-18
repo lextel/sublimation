@@ -101,8 +101,6 @@ class CartController extends AppController {
         $footer = View::make('api.index_footer')->render();
 
         return Response::json(['code'=>0 ,'msg' => '', 'data' => ['header' => $header, 'main' => $main, 'footer' => $footer]]);
-
-
     }
 
     // 支付

@@ -77,7 +77,9 @@ html.mm-blocking #mm-blocker {
   display: block; }
 
 .mm-menu.mm-current {
-  display: block; }
+  display: block;
+    z-index: 9999;
+}
 
 .mm-menu {
   background: inherit;
@@ -148,9 +150,6 @@ html.mm-blocking #mm-blocker {
       color: inherit;
       position: relative;
       display: block;
-      height: 60px;
-      line-height: 60px;
-      padding-left: 65px;
       }
   .mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-noresults)::after {
     content: '';
@@ -262,7 +261,7 @@ html.mm-opened .mm-page {
   background: #333333; }
 
 .mm-menu {
-  color: rgba(255, 255, 255, 0.6); }
+  color: #ffffff; }
   .mm-menu .mm-list > li:after {
     border-color: rgba(0, 0, 0, 0.15); }
   .mm-menu .mm-list > li > a.mm-subclose {
@@ -299,15 +298,15 @@ html.mm-opened.mm-opening .mm-fixed-bottom {
   html.mm-opened.mm-opening .mm-fixed-top,
   html.mm-opened.mm-opening .mm-fixed-bottom {
     left: 140px; } }
-@media all and (min-width: 550px) {
+@media all and (min-width:400px) {
   .mm-menu {
-    width: 440px; }
+    width:120px; }
 
   html.mm-opened.mm-opening .mm-page,
   html.mm-opened.mm-opening #mm-blocker,
   html.mm-opened.mm-opening .mm-fixed-top,
   html.mm-opened.mm-opening .mm-fixed-bottom {
-    left: 440px; } }
+    left: 120px; } }
 html.mm-nooverflowscrolling.mm-opened {
   height: auto;
   overflow: auto;
