@@ -100,9 +100,7 @@ class CartController extends AppController {
         $main   = View::make('api.cart.order')->with('items', $items)->render();
         $footer = View::make('api.index_footer')->render();
 
-        return Response::json(['code'=>0 ,'msg' => '', 'data' => ['header' => $header, 'main' => $main, 'footer' => $footer]])
-
-
+        return Response::json(['code'=>0 ,'msg' => '', 'data' => ['header' => $header, 'main' => $main, 'footer' => $footer]]);
     }
 
     // 支付

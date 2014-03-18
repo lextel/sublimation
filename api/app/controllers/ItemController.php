@@ -2,6 +2,7 @@
 
 class ItemController extends AppController {
 
+    // 首页模板
     public function getIndex() {
 
         $sort = Input::get('sort', 'win');
@@ -25,6 +26,7 @@ class ItemController extends AppController {
                          ->header('Access-Control-Allow-Origin', '*');
     }
 
+    // 商品列表内容
     public function getList() {
 
         $sort = Input::get('sort', 'win');
@@ -46,6 +48,50 @@ class ItemController extends AppController {
                       ->render();
 
         return Response::json(['code'=>0, 'msg'=>'', 'data' => ['list' => $list]])
+                         ->header('Access-Control-Allow-Origin', '*');;
+    }
+
+    // 商品详情
+    public function getView() {
+
+        $id = Input::get('id');
+        if(empty($id)) return Response::json(['code' => 1, 'msg' => '参数错误']);
+
+        $itemModel = new Item();
+        $item = $itemModel->view($id);
+
+        return Response::json(['code'=>0, 'msg'=>'', 'data' => ['list' => $item]])
+                         ->header('Access-Control-Allow-Origin', '*');;
+
+    }
+
+    // 所有乐拍记录
+    public function getOrder() {
+
+        $id = Input::get('id');
+        $page = Input::get('page', 1);
+
+        if(empty($id)) return Response::json(['code' => 1, 'msg' => '参数错误']);
+
+        $itemModel = new Item();
+        $order = $itemModel->order($id, $page);
+
+        return Response::json(['code'=>0, 'msg'=>'', 'data' => ['list' => $order]])
+                         ->header('Access-Control-Allow-Origin', '*');;
+
+    }
+
+    // 图文详情
+    public function getInfo() {
+
+        $id = Input::get('id');
+
+        if(empty($id)) return Response::json(['code' => 1, 'msg' => '参数错误']);
+
+        $itemModel = new Item();
+        $info = $itemModel->info($id);
+
+        return Response::json(['code'=>0, 'msg'=>'', 'data' => ['main' => $info]])
                          ->header('Access-Control-Allow-Origin', '*');;
     }
 
