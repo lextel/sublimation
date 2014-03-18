@@ -71,12 +71,37 @@ class CartController extends AppController {
     }
 
     // 结算验证
-    public function postCheck() {
+    public function getCheck() {
+
+        $itemModel = new Item();
+        $pass = $itemModel->cartCheck();
+
+        $result = ['code' => 1, 'msg' => '购物车中有过期商品'];
+        if($pass) {
+            $result = ['code' => 0, 'msg' => '提交中...'];
+        }
+
+        return Response::json($result)->header('Access-Control-Allow-Origin', '*');
+    }
+
+    // 支付插件验证
+    public function getCheckPay() {
+        // TODO 等支付
 
     }
 
     // 订单页面
     public function getOrder() {
+
+        $title = "结算";
+
+        $items = Cart::content();
+        $header = View::make('api.main_header')->with('title', $title)->render(); 
+        $main   = View::make('api.cart.order')->with('items', $items)->render();
+        $footer = View::make('api.index_footer')->render();
+
+        return Response::json(['code'=>0 ,'msg' => '', 'data' => ['header' => $header, 'main' => $main, 'footer' => $footer]])
+
 
     }
 

@@ -52,4 +52,23 @@ class Item extends Eloquent {
         return $items;
     }
 
+    /**
+     * 检查购物车过期商品
+     *
+     */
+    public function cartCheck() {
+
+        $cartItems = Cart::content();
+        $return = true;
+        foreach($cartItems as $item) {
+            $phase = Phase::find($item->id)->toArray();
+
+            if($item->qty > $phase['remain']) {
+                $return = false;
+            }
+        }
+
+        return $return;
+    }
+
 }
