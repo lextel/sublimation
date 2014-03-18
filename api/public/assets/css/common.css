@@ -657,6 +657,10 @@ button.btn-cancel {
     -webkit-transform: scale(1);
   }
 }
+.content {
+  background: #ffffff;
+  padding: 0.8em;
+}
 /*揭晓*/
 .countdown {
   overflow: hidden;
