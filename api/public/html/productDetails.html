@@ -14,7 +14,7 @@
 <body>
 <!--侧滑菜单-->
 <div data-role="page">
-    <div data-role="header">
+    <div data-role="header" class="hd-theme-b">
         <h1>商品详情</h1>
         <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-left ui-btn  ui-btn-icon-notext" data-role="button">
             <span class="icon-arrow-left"></span>
@@ -22,71 +22,67 @@
         <a href="" data-rel="back" class="ui-nodisc-icon ui-btn-right ui-btn  ui-btn-icon-notext" data-role="button">
             <span class="icon-share"></span>
         </a>
-        <div data-role="navbar" class="period-nav" role="navigation">
-            <ul>
-                <li><a href="" class="ui-btn-active">第6期(进行中)</a></li>
-                <li><a href="">第5期</a></li>
-                <li><a href="">第4期</a></li>
-                <li><a href="">第3期</a></li>
-            </ul>
-        </div>
     </div>
-    <div role="main" class="ui-content">
-        <div class="info-wrap">
-            <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
-            <div class="price">价值：00000.00</div>
-            <div class="inner-wide">
-                 <div class="progress">
-                      <div class="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
-                 </div>
-                 <div class="row number-wrap">
-                       <span class="fl">4199</span>
-                       <span class="fr">28</span>
-                 </div>
-                 <div class="row word-wrap">
-                       <span class="fl">总人次</span>
-                       <span class="fr">剩余人次</span>
-                 </div>
-            </div>
-            <div class="link-menu">
+    <div role="main" class="ui-content bd">
+        <div class="detailsWarp">
+            <div data-role="navbar" class="period-nav" role="navigation">
                 <ul>
-                    <li>
-                        <a href="">所有乐拍记录<span class="icon-uniE600 fr"></span></a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">图文详情<span class="icon-uniE600 fr"></span></a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">
-                            已有<span class="red">0</span>个晒单，<span class="red">0</span>条评论<span class="icon-uniE600 fr"></span>
-                        </a>
-                    </li>
+                    <li><a href="" class="ui-btn-active">第6期(进行中)</a></li>
+                    <li><a href="">第5期</a></li>
+                    <li><a href="">第4期</a></li>
+                    <li><a href="">第3期</a></li>
                 </ul>
             </div>
-            <!--
-            <article class="winner-wrap">
-                <section class="sectionOne">
-                     <img src="../assets/images/meinv.jpg" alt=""/>
-                </section>
-                <section class="sectionTwo">
-                    苹果(Apple)iPhone 5C 16G 3G 手机
-                </section>
-            </article>
-            -->
-            <div class="winner-wrap">
-                <div class="img-md fl">
-                    <span class="img-wide"><a href="#" class="ui-link"><img src="../assets/images/meinv.jpg" alt="美女"></a></span>
+            <div class="info-wrap">
+                <div class="title">苹果(Apple)iPhone 5C 16G 3G 手机</div>
+                <div class="info">价值：00000.00</div>
+                <div class="inner-wide">
+                    <div class="progress">
+                        <div class="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                    </div>
+                    <div class="number-row">
+                        <span class="fl">4199</span>
+                        <span class="fr">28</span>
+                    </div>
+                    <div class="word-row">
+                        <span class="fl">总人次</span>
+                        <span class="fr">剩余人次</span>
+                    </div>
                 </div>
-                <div class="info-wrap fr">
-                    <div class="gainer">王尼玛中大奖(广东深圳市)</div>
-                    <div class="price">本期乐拍:<s class="red">00</s>人次</div>
-                    <div class="luckycode">幸运乐拍码:<s class="red">10000078</s></div>
-                    <div class="datetime">乐拍时间:2013-12-20 17:00</div>
-                    <div class="datetime">揭晓时间:2013-12-20 17:00</div>
+                <div class="link-menu">
+                    <ul>
+                        <li>
+                            <a href="">所有乐拍记录<span class="icon-uniE600 fr"></span></a>
+                        </li>
+                        <li>
+                            <a href="">图文详情<span class="icon-uniE600 fr"></span></a>
+                        </li>
+                        <li>
+                            <a href="">已有<b class="red">0</b>个晒单,<b class="red">0</b>条评论<span class="icon-uniE600 fr"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--
+                <article class="winner-wrap">
+                    <section class="sectionOne">
+                         <img src="../assets/images/meinv.jpg" alt=""/>
+                    </section>
+                    <section class="sectionTwo">
+                        苹果(Apple)iPhone 5C 16G 3G 手机
+                    </section>
+                </article>
+                -->
+                <div class="winner-wrap">
+                    <div class="img-md fl">
+                        <span class="img-wide"><a href="#" class="ui-link"><img src="../assets/images/meinv.jpg" alt="美女"></a></span>
+                    </div>
+                    <div class="info-box fr">
+                        <div class="gainer">王尼玛中大奖</div>
+                        <div class="info">本期乐拍:<s class="red">00</s>人次</div>
+                        <div class="info">幸运乐拍码:<s class="red">10000078</s></div>
+                        <div class="info">乐拍时间:2013-12-20 17:00</div>
+                        <div class="info">揭晓时间:2013-12-20 17:00</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +91,12 @@
         <article class="fd-btn-group">
             <section class="sectionOne"><button class="btn-md btn-danger">立即乐拍</button></section>
             <section class="sectionTwo"><button class="btn-md btn-yellow">加入购物车</button></section>
-            <section class="sectionThree"><div class="cart"><span class="icon-cart"></span><s></s></div></section>
+            <section class="sectionThree"><div class="cart"><span class="icon-cart"></span><s>0</s></div></section>
+        </article>
+        <!--卖完-->
+        <article class="fd-btn-state">
+            <section class="sectionOne"><div class="sell-out">啊哈！售罄啦！</div></section>
+            <section class="sectionTwo"><div class="cart"><span class="icon-cart"></span><s>0</s></div></section>
         </article>
     </div>
 </div>

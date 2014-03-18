@@ -55,9 +55,6 @@ small {
   overflow: hidden;
   position: relative;
 }
-.word {
-  font-size: 0.875em;
-}
 .word s {
   margin: 0 0.315em ;
 }
@@ -65,7 +62,8 @@ small {
   color: #666666;
 }
 .title {
-  font-size: 0.875em;
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 .money b {
   margin: 0 5px;
@@ -73,28 +71,23 @@ small {
 textarea {
   border: 1px solid #d2d2d2;
 }
-.number {
-  font-size: 0.875em;
-  margin-bottom: 0.31em;
-}
-.gainer,
-.luckycode,
-.datetime,
-.persontime {
+.info {
   width: 100%;
   color: #666;
-  font-size: 0.875em;
+  font-size: 1.3rem;
   margin-bottom: 0.312em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.gainer b {
-  color: #333333;
-}
-.name s {
-  font-size: 0.8em;
-  color: #999999;
+.gainer {
+  width: 100%;
+  font-size: 1.4rem;
+  margin-bottom: 0.312em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #0093D0;
 }
 .checkBox-left {
   text-indent: 2em;
@@ -121,27 +114,28 @@ textarea {
   border-radius: 3px;
 }
 .ui-navbar li .ui-btn {
-  padding: 0.8em 0;
+  padding: 0.6em 0;
 }
 /*按钮*/
 .btn-xs {
   padding: 0.3em 0.875em;
   border-radius: 3px;
+  font-size: 1.2rem;
 }
 .btn-sm {
-  padding: 0.4em 1em;
+  padding: 0.3em 1em;
   line-height: 1.5;
-  font-size: 0.875em;
+  font-size: 1.4rem;
   border-radius: 3px;
 }
 .btn-md {
   padding: 0.6em 1em;
-  font-size: 0.875em;
+  font-size: 1.4rem;
   border-radius: 3px;
 }
 .btn-lg {
   padding: 0.5em 1.2em;
-  font-size: 1.125em;
+  font-size: 1.6rem;
   border-radius: 4px;
 }
 a.btn-save {
@@ -156,9 +150,10 @@ a.btn-white {
 }
 a.btn-danger,
 button.btn-danger {
-  background: #af2812;
+  background: -webkit-gradient(linear, left top);
   color: #ffffff;
   border: 1px solid #750000;
+  box-shadow: 0px 0px 5px 0px #810202;
 }
 a.btn-yellow,
 button.btn-yellow {
@@ -206,21 +201,35 @@ button.btn-cancel {
   color: #af2812;
 }
 .cart {
-  font-size: 20px;
   width: 36px;
   height: 36px;
-  line-height: 36px;
+  line-height: 33px;
+  margin: .5em 0;
   text-align: center;
   display: inline-block;
-  margin: .3em 0;
-  border: 1px solid #b5b5b5;
-  background: #f1f1f1;
-  border-radius: 0.25em;
+  border-radius: 4px;
+  border: 1px solid #adadad;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
   position: relative;
 }
+.cart .icon-cart {
+  font-size: 2.2rem;
+  line-height: 0;
+  vertical-align: middle;
+}
 .cart s {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #af2812;
+  border-radius: 50%;
+  background: #ffd79c;
   display: block;
   position: absolute;
+  top: 0;
+  right: 0;
 }
 .nav-btn ul li:last-child {
   width: 12%;
@@ -247,9 +256,6 @@ button.btn-cancel {
 .img-mx {
   width: 30%;
 }
-.img-sm {
-  width: 40%;
-}
 .img-mx s,
 .img-sm s {
   width: 100%;
@@ -258,7 +264,7 @@ button.btn-cancel {
   background: #000000;
   opacity: 0.6;
   color: #ffffff;
-  font-size: 0.75em;
+  font-size: 1.2rem;
   padding: .312em 0;
   position: absolute;
   left: 0;
@@ -286,26 +292,31 @@ button.btn-cancel {
 }
 .progress .progressbar {
   height: 100%;
-  font-size: 0.75em;
+  font-size: 1.2rem;
   background-color: #af2812;
 }
-.number-wrap {
-  font-size: 0.75em;
+.number-row {
+  font-size: 1.2rem;
+  overflow: hidden;
 }
-.word-wrap {
-  font-size: 0.75em;
+.word-row {
   color: #999999;
+  font-size: 1.2rem;
+  overflow: hidden;
 }
-.price {
-  font-size: .875em;
-  line-height: 1.25;
-  color: #999999;
-  margin-bottom: 0.31em;
+.word-row span {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.word-row span.fr {
+  text-align: right;
 }
 .addCart {
-  border: 1px solid #DDDDDD;
-  font-size: 2em;
-  background: #f1f1f1;
+  border: 1px solid #cccccc;
+  font-size: 3.2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
   border-radius: 0.25em;
 }
 .addCart button {
@@ -313,8 +324,9 @@ button.btn-cancel {
   margin: 0;
   width: 2em;
   height: 2em;
-  font-size: 24px;
+  font-size: 2.4rem;
   border: 0;
+  background: none;
 }
 /*所有商品--排序*/
 .sort-bar {
@@ -332,21 +344,30 @@ button.btn-cancel {
   background: #ffffff;
   border-bottom-color: #ffffff;
 }
+.product-list {
+  overflow: hidden;
+}
 .product-list .item {
-  padding: 0.625em;
-  margin: 0.625em;
+  padding: 0.6em;
+  margin: 0.6em;
   border: 1px solid #D2D2D2;
   background: #ffffff;
-  margin-bottom: 0.625em;
+  margin-bottom: 0.6em;
   box-shadow: 0 0 3px 1px #EEECEC;
 }
 .product-list .title {
-  font-size: 0.875em;
   max-height: 2.6em;
-  overflow: hidden;
 }
-.product-list .progress-wrap {
-  width: 60%;
+.product-list .inner-wide {
+  display: box;
+  display: -moz-box;
+  display: -webkit-box;
+}
+.product-list .inner-wide .sectionOne {
+  margin-right: 10px;
+  box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
 }
 .sidebar {
   width: 100%;
@@ -380,10 +401,19 @@ button.btn-cancel {
   vertical-align: middle;
 }
 /*商品详情*/
+.detailsWarp {
+  overflow: hidden;
+}
+.detailsWarp .info-wrap {
+  padding: 0.8em;
+}
+.detailsWarp .inner-wide {
+  margin-bottom: 0.8em;
+}
 .period-nav {
   background: #ffffff;
 }
-.ui-header .period-nav a.ui-link {
+.period-nav a.ui-link {
   padding-right: 0;
   padding-left: 0;
   border-top-color: #d2d2d2;
@@ -393,7 +423,7 @@ button.btn-cancel {
 .period-nav ul li:last-child a.ui-link {
   border-right: 0;
 }
-.ui-header .period-nav a.ui-btn-active {
+.period-nav a.ui-btn-active {
   background: #af2812;
   border-right: 0;
   color: #ffffff;
@@ -406,29 +436,57 @@ button.btn-cancel {
 }
 .fd-btn-group {
   width: 100%;
+  height: 52px;
   display: box;
   display: -webkit-box;
   display: -moz-box;
-  border-top: 2px solid #D2D2D2;
+  -webkit-box-align: center;
   background: #eeeeee;
 }
 .fd-btn-group section {
-  padding: 0 10px;
+  padding: 0 0.6em;
 }
 .fd-btn-group .sectionOne {
-  -moz-box-flex: 3;
-  -webkit-box-flex: 3;
-  box-flex: 3;
-}
-.fd-btn-group .sectionTwo {
-  -moz-box-flex: 3;
-  -webkit-box-flex: 3;
-  box-flex: 3;
-}
-.fd-btn-group .sectionThree {
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
   box-flex: 1;
+}
+.fd-btn-group .sectionTwo {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.fd-btn-group .sectionThree {
+  width: 38px;
+}
+.fd-btn-state {
+  width: 100%;
+  height: 52px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-align: center;
+  background: #eeeeee;
+  display: none;
+}
+.fd-btn-state section {
+  padding: 0 0.6em;
+}
+.fd-btn-state .sectionOne {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.fd-btn-state .sectionTwo {
+  width: 38px;
+}
+.sell-out {
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #D2D2D2;
+  border-radius: 4px;
+  background: #e5e5e5;
 }
 /*
 .winner-wrap{
@@ -462,7 +520,7 @@ button.btn-cancel {
   border: 1px solid #D2D2D2;
   background: #ffffff;
 }
-.winner-wrap .info-wrap {
+.winner-wrap .info-box {
   width: 55%;
   margin-left: 0.6em;
 }
@@ -477,7 +535,7 @@ button.btn-cancel {
 .refresh-box {
   overflow: hidden;
   text-align: center;
-  font-size: 0.875em;
+  font-size: 1.6rem;
   padding: 0.6em;
 }
 .refresh {
@@ -614,7 +672,7 @@ button.btn-cancel {
 }
 .countdown ul li {
   float: left;
-  font-size: 2em;
+  font-size: 1.4rem;
   color: #af2812;
   overflow: hidden;
   height: 50px;
@@ -645,7 +703,7 @@ button.btn-cancel {
   float: left;
   width: 0;
   height: 100%;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 20px;
   color: white;
   text-align: center;
@@ -697,7 +755,7 @@ button.btn-cancel {
   color: #ffffff;
   padding: 0.1em 0;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 1.2rem;
   background: #000;
   opacity: 0.6;
   position: absolute;
@@ -709,7 +767,7 @@ button.btn-cancel {
   height: 46px;
   line-height: 46px;
   text-align: center;
-  font-size: 1.125em;
+  font-size: 1.8rem;
   border: 1px solid #D2D2D2;
   background: #ffffff;
   margin-bottom: 0.8em;
@@ -756,7 +814,7 @@ button.btn-cancel {
 }
 .social-bar {
   margin-top: 0.6em;
-  font-size: 0.75em;
+  font-size: 1.2rem;
 }
 .icon-heart {
   color: #af2812;
@@ -779,7 +837,7 @@ button.btn-cancel {
   text-align: center;
 }
 .content p {
-  font-size: 0.875em;
+  font-size: 1.4rem;
   text-indent: 2em;
   line-height: 1.6em;
 }
@@ -795,7 +853,7 @@ button.btn-cancel {
   background: #ffffff;
 }
 .comment-wrap dt {
-  font-size: 0.875em;
+  font-size: 1.4rem;
   background: #eeeeee;
   border-bottom: 1px solid #d2d2d2;
 }
@@ -889,6 +947,7 @@ html .btn-theme-a {
   padding: 10px;
   color: #818181;
   border-bottom: 1px dashed #d2d2d2;
+  margin-bottom: 0.8em;
 }
 .else-login ul {
   padding: 0.4em 0;
@@ -902,8 +961,8 @@ html .btn-theme-a {
 .else-login ul li a {
   display: block;
   margin: 0 auto;
-  width: 3.125em;
-  height: 3.125em;
+  width: 3.88em;
+  height: 3.88em;
   background: url("../images/login.png") no-repeat;
 }
 .else-login ul li a.sina {
@@ -916,7 +975,7 @@ html .btn-theme-a {
   background-position: -271px -205px;
 }
 .agree-bar {
-  font-size: 0.75em;
+  font-size: 1.2rem;
 }
 .agree-bar a {
   text-decoration: none;
@@ -927,7 +986,7 @@ html .btn-theme-a {
 }
 .agree-wrap {
   background: #ffffff;
-  font-size: 0.875em;
+  font-size: 1.4rem;
 }
 /*购物车*/
 .cartImg {
@@ -960,7 +1019,7 @@ html .btn-theme-a {
   background: #eeeeee;
 }
 .total {
-  font-size: 0.75em ;
+  font-size: 1.4rem;
   display: inline-block;
   line-height: 48px;
 }
@@ -1028,7 +1087,7 @@ html .btn-theme-a {
 .btn-remove.ui-btn {
   text-align: left;
   width: 52px;
-  font-size: 0.85em;
+  font-size: 1.4rem;
   padding: .0em .0em;
   margin: 0;
   font-weight: normal;
@@ -1056,12 +1115,12 @@ html .btn-theme-a {
 .paying-list dt h4 {
   font-weight: normal;
   margin-bottom: 0.312em;
-  font-size: 1em;
+  font-size: 1.6rem;
 }
 .paying-list dd {
   padding: 0.8em;
   text-align: right;
-  font-size: 1em;
+  font-size: 1.6rem;
 }
 .paying-way {
   overflow: hidden;
@@ -1099,18 +1158,19 @@ html .btn-theme-a {
 }
 .link-menu ul {
   overflow: hidden;
-  margin-bottom: 0.8em;
-  border-bottom: 1px solid #D2D2D2;
 }
 .link-menu ul li {
+  margin-bottom: 0.8em;
   overflow: hidden;
 }
 .link-menu ul li a {
   padding: .8em ;
   display: block;
   border: 1px solid #D2D2D2;
-  border-bottom: 0;
-  background: #fbfbfb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+}
+.link-menu ul li b {
+  margin: 0 5px;
 }
 .link-menu ul li s {
   display: inline-block;
@@ -1130,7 +1190,7 @@ html .btn-theme-a {
   line-height: 1.25em;
   text-align: center;
   width: 1.25em;
-  font-size: 0.75em;
+  font-size: 1.2rem;
   text-indent: 0;
   border-radius: 50%;
   background: #af2812;
@@ -1170,6 +1230,9 @@ html .btn-theme-a {
   padding: 0.8em;
   border-bottom: 1px dashed #D2D2D2;
   background: #fff;
+}
+.record-list li:last-child {
+  border-bottom: 0;
 }
 .record-list .info-wrap {
   width: 56%;
@@ -1259,18 +1322,19 @@ html .btn-theme-a {
   width: 56%;
 }
 .show-wrap {
+  background: #ffffff;
   padding: 0.8em;
 }
 .show-wrap .item {
   padding: 0.8em;
   border: 1px solid #D2D2D2;
-  box-shadow: 0 0 3px 2px #E7E4E4;
+  box-shadow: 0 0 5px 1px #ECE9E9;
 }
 .bask-content {
   height: 61px;
   line-height: 22px;
   overflow: hidden;
-  font-size: 0.75em;
+  font-size: 1.4rem;
   margin-bottom: 0.7em;
 }
 .back-picture {
@@ -1330,7 +1394,7 @@ html .btn-theme-a {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 3rem;
   border-radius: 0;
   background: #ffffff;
   color: #D2D2D2;
@@ -1346,7 +1410,7 @@ html .btn-theme-a {
   padding: 0.6em;
 }
 .addressWrap .item .icon-checkmark {
-  font-size: 1.3em;
+  font-size: 2.08rem;
   color: #05CE17;
   position: absolute;
   top: 30%;
@@ -1380,7 +1444,7 @@ html .btn-theme-a {
   width: 100%;
   background: #ffffff;
   border-radius: 0;
-  font-size: 0.875em;
+  font-size: 1.4rem;
 }
 .addressWrap .title {
   overflow: hidden;
@@ -1446,7 +1510,7 @@ body .ui-table-columntoggle-btn {
   height: 45px;
   display: block;
   text-align: center;
-  font-size: 0.85em;
+  font-size: 1.4rem;
   border: 2px solid #D2D2D2;
 }
 /*资料修改*/
@@ -1466,7 +1530,7 @@ body .ui-table-columntoggle-btn {
 .no-verify,
 .verify {
   color: #999999;
-  font-size: 0.75em;
+  font-size: 1.2rem;
   margin-bottom: 0.6em;
 }
 .verify .icon-checkmark-circle {
@@ -1552,4 +1616,12 @@ body .ui-table-columntoggle-btn {
   border: 1px solid #D2D2D2;
   margin-bottom: 10px;
   width: 100%;
+}
+/*个人主页*/
+.home-top {
+  margin: 0.8em 0;
+  text-align: center;
+}
+.home-top .portrait {
+  margin: 0 auto 0.6em;
 }

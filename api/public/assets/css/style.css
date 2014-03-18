@@ -34,13 +34,13 @@ body{
 .icon-list:before {
     content: "\e605";
     color: #af2812;
-    font-size: 1.4em;
+    font-size: 1.8rem;
 }
 
 .icon-arrow-left:before {
     content: "\e611";
     color: #af2812;
-    font-size: 1.4em;
+    font-size: 1.8rem;
     font-weight: bolder;
 }
 .icon-alarm:before {
@@ -60,11 +60,11 @@ body{
 }
 .icon-grid:before {
     content: "\e60a";
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .icon-home:before {
     content: "\e608";
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .icon-image:before {
     content: "\e602";
@@ -74,7 +74,7 @@ body{
 }
 .icon-cart2:before {
     content: "\e60d";
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .icon-envelope:before {
     content: "\e60e";
@@ -90,16 +90,16 @@ body{
 }
 .icon-user:before {
     content: "\e60b";
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .icon-user2:before {
     content: "\e613";
     color: #a0a0a0;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .icon-cog:before {
     content: "\e614";
-    font-size: 1.6em;
+    font-size: 1.6rem;
     color: #af2812;
 }
 .icon-lock:before {
@@ -121,7 +121,7 @@ body{
 .icon-share:before {
     content: "\e619";
     color: #af2812;
-    font-size: 1.4em;
+    font-size: 1.8rem;
 }
 .icon-bubbles:before {
     content: "\e625";
@@ -214,7 +214,7 @@ body{
     line-height: 50px;
     color:#AF2812;
     text-indent: 1.25em;
-    font-size: 1.125em;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 .modal-theme .modal-wide{
@@ -224,7 +224,7 @@ body{
     background: #eeeeee;
     padding: 1em;
     border-top: 1px dashed #D2D2D2;
-    font-size: 1.215em;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 .modal-wide .ui-radio .ui-btn-icon-right:after{

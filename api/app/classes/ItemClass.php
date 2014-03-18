@@ -1,6 +1,6 @@
 <?php
 
-class ItemClass {
+class ItremClass {
 
     public static $pagesize = 10;
 
