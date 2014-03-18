@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile-1.4.1.min.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/style.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/common.css');?>"/>
-    <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile-1.4.0-rc.1.min.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile.iscrollview.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile.iscrollview-pull.css');?>"/>
-    <link rel="stylesheet" href="<?php echo asset('/assets/css/demo.css');?>"/>
 
     <script src="<?php echo asset('assets/js/jquery-1.10.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/jquery.mobile-1.4.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/common.js');?>"></script>
-    <script src="<?php echo asset('assets/js/demo.js');?>"></script>
-    <script src="<?php echo asset('assets/js/jquery.mobile-1.4.0-rc.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/iscroll.js');?>"></script>
     <script src="<?php echo asset('assets/js/jquery.mobile.iscrollview.js');?>"></script>
     <script src="<?php echo asset('assets/js/pull-example.js');?>"></script>
