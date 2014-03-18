@@ -26,25 +26,18 @@
 
 $().ready(function(){
 
-	// 邮箱验证   
-        jQuery.validator.addMethod("isEmail", function(value) {
-           var tel = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-           return tel.test(value);
-        }, "is not email");
-	
-
-	// 邮箱ajax验证
-        jQuery.validator.addMethod("isAjaxEmail", function(value) {
-	    json = {url: "signin" , type : "post" , dataType : "json" , data: value }
-	    return ajaxdome(json);
-        }, "is not email");
+	    // 邮箱ajax验证
+      jQuery.validator.addMethod("isAjaxEmail", function(value) {
+	        json = {url: "signin" , type : "post" , dataType : "json" , data: value }
+	        return ajaxdome(json);
+      }, "is not email");
 
 	
-       // 昵称ajax验证
-        jQuery.validator.addMethod("isAjaxNickname", function(value) {
-	      json = {url: "signin" , type : "post" , datatype : "json" , data: value }
-	  return ajaxdome(json);
-        }, "is not email");
+      // 昵称ajax验证
+      jQuery.validator.addMethod("isAjaxNickname", function(value) {
+	       json = {url: "signin" , type : "post" , datatype : "json" , data: value }
+	       return ajaxdome(json);
+      }, "is not email");
 
 
 
