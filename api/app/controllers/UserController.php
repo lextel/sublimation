@@ -45,7 +45,8 @@ class UserController extends \BaseController {
             return Response::json($res);
         }
         //验证密码是否正确,改动check
-        if (Hash::make($password, ['method'=>'pbkdf2']) == $user->password){
+        $userhash = new UserHash();
+        if ($userhash->hashmake($password, ['method'=>'pbkdf2']) == $user->password){
             Auth::login($user);
             $res = ['code'=>0, 'msg'=>'登录成功'];
             return Response::json($res);
@@ -101,10 +102,10 @@ class UserController extends \BaseController {
             $res = ['code'=>1, 'msg'=>'您注册的昵称已经存在'];
             return Response::json($res);
         }
-
+        $userhash = new UserHash();
         Member::create([
           'username' => $username,
-          'password' => Hash::make($password, ['method'=>'pbkdf2']),   // 生成密码.
+          'password' => $userhash->hashmake($password, ['method'=>'pbkdf2']),   // 生成密码.
           'email' => $username,
           'nickname' => $nickname,
         ]);

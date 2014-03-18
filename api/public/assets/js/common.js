@@ -1,7 +1,7 @@
 /*
-*ShowMessage ：提示信息
-*mag   :提示的值
-*time  :提示时间毫秒，不写此参数默认为2000
+*ShowMessage 拢潞脤谩脢戮脨脜脧垄
+*mag   :脤谩脢戮碌脛脰碌
+*time  :脤谩脢戮脢卤录盲潞脕脙毛拢卢虏禄脨麓麓脣虏脦脢媒脛卢脠脧脦陋2000
 */
     function showMessage(mag,time){
         time = typeof time !== 'undefined' ? time : 2000;
@@ -15,8 +15,6 @@
     });
     var interval = setInterval(function (){
 	  $.mobile.loading( "hide" );
-	  clearTimeout(interval);  //关闭定时器
+	  clearTimeout(interval);  //鹿脴卤脮露篓脢卤脝梅
     	}, time);   
 	}
-
-   

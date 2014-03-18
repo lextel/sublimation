@@ -1,23 +1,7 @@
-<div data-role="navbar" class="sort-bar ui-navbar" role="navigation">
-    <ul class="ui-grid-c">
-        <?php
-            $blockClass = ['a', 'b', 'c', 'd'];
-            foreach (ItemClass::$sort as $key => $item) {
-                $activeClass = '';
-                if($alias == $item['alias']) $activeClass = ' ui-btn-active';
-                if(is_array($item['sort'])) $sort = $sort == 'desc' ? 'asc' : 'desc';
-
-                echo "<li class='ui-block-{$blockClass[$key]}'>" .
-                     "<a href='SERVER/m?alias={$item['alias']}&sort={$sort}' class='ui-link ui-btn {$activeClass}'>{$item['name']}</a>".
-                     "</li>";
-            }
-
-        ?>
-    </ul>
-</div>
-<div class="product-list" data-inset="true" data-role="listview">
     <?php 
     if(!empty($lists)):
+    ?>
+    <?php
     foreach($lists as $item): 
     ?>
     <div class="item">
@@ -49,8 +33,13 @@
     </div>
     <?php 
     endforeach; 
+    ?>
+    <div class="iscroll-pullup">
+        <span class="iscroll-pull-icon"></span>
+        <span class="iscroll-pull-label"  data-iscroll-pulled-text="加载中..." data-iscroll-loading-text="上拉刷新" >上拉刷新</span>
+    </div>
+    <?php
     else:
     echo '<div class="noitem">没有商品</div>';
     endif;
     ?>
-</div>
