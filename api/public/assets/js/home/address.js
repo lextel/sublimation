@@ -1,4 +1,12 @@
 $(function (){
+    // 手机号码验证
+    jQuery.validator.addMethod("isMoble", function(value) {
+         var tel = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+         return tel.test(value);
+    }, "is not email");
+
+
+
 	$(".addForm").validate({
         submitHandler:function(form){
 		      /*var jsonData = {
@@ -9,12 +17,8 @@ $(function (){
 	  	     if(ajaxdome(json)){
 	   		 }*/
 	   		 
-         $.mobile.changePage( "/u" , {
-          allowSamePageTransition: true,
-          transition: "slideup" ,
-          reverse: true ,
-          pageContainer:function (){showMessage("xxxxx");},
-          changeHash: true
+         jQuery.mobile.loadPage( "/u/addresses", {
+          data:"xxxxxxxxx"
         });
 	   		 
 	   		 //console.log(form);

@@ -1,15 +1,5 @@
-	var pn = 0;
-	//初始化
-    $(document).on('pageinit', '#home', function(){
-        var url = "http://192.168.4.220/u/wins/10";
-        getAjaxData(url, userwins);
-    });
-    $ ( document ). delegate ( "div.pull-demo-page" , "pageinit" , function ( event ) {
-		$ ( ".iscroll-wrapper" , this ). bind ( {
-	  		"iscroll_onpullup": onPullUp
-	 	});
-	});
-
+    
+    var pn = 0;
     function onPullUp(){
         pn += 10;
         var url = "http://192.168.4.220/u/wins/" + pn;
@@ -58,4 +48,11 @@
                         $('.owned-list').append(text);
                     });
        }
+       //初始化数据
+       onPullUp();
        
+    $ ( document ). delegate ( "div.pull-demo-page" , "pageinit" , function ( event ) {
+        $ ( ".iscroll-wrapper" , this ). bind ( {
+            "iscroll_onpullup": onPullUp
+        });
+    });
