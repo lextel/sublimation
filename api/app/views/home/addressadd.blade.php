@@ -8,19 +8,74 @@
     <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile-1.4.1.min.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/style.css');?>"/>
     <link rel="stylesheet" href="<?php echo asset('/assets/css/common.css');?>"/>
+    <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile.iscrollview.css');?>"/>
+    <link rel="stylesheet" href="<?php echo asset('/assets/css/jquery.mobile.iscrollview-pull.css');?>"/>
 
     <script src="<?php echo asset('assets/js/jquery-1.10.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/jquery.mobile-1.4.1.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/jquery.validate.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/additional-methods.min.js');?>"></script>
     <script src="<?php echo asset('assets/js/common.js');?>"></script>
+    <script src="<?php echo asset('assets/js/iscroll.js');?>"></script>
+    <script src="<?php echo asset('assets/js/jquery.mobile.iscrollview.js');?>"></script>
+    <script src="<?php echo asset('assets/js/pull-example.js');?>"></script>
     <script src="<?php echo asset('assets/js/home/address.js');?>"></script>
 
     <script>
     function ck(){
-        window.location.href ="../../html/dialog.html";
-        //window.location.href ="../../html/dialog.html";
+       $("#dig").click();
     }
+    function onPull(){
+    }
+    function init(){
+        $("#ulxp li").remove();
+        $("#ulxp").append("<li><a href='#'>请选择</a></li>");
+    }
+    $(function (){
+    //var province;
+    //var area ; 
+    //获取js文件到值
+    $.getJSON("<?php echo asset('assets/js/city.js');?>",function(json){
+        //添加省信息
+        $.each(json,function (i,obj){
+            $("#ulxp").append("<li><a id='city"+i+"' href='javascript:void(0)'>"+obj.n+"</a></li>");
+            //单击省添加市
+            $("#city"+i).bind("click", function(){
+                $("#province").attr("value",obj.n);//给省文本框赋值
+                $.each(json,function (j,objs){
+                if(objs.n == obj.n){
+                    init();//初始化头
+                    $.each(objs.s,function (k,o){
+                        $("#ulxp").append("<li><a id='citys"+k+"' href='javascript:void(0)'>"+o.n+"</a></li>");
+                        //单击市添加县值
+                        $("#citys"+k).bind("click", function(){
+                            $("#county").attr("value",o.n);//给地区文本框赋值
+                            //判断是否存在这个县
+                            if(typeof($(o).attr("s"))!="undefined"){
+                                init();
+                                $.each(o.s,function (ki,os){
+                                    $("#ulxp").append("<li><a id='cityss"+ki+"' href='javascript:void(0)'>"+os.n+"</a></li>");
+                                });
+                            }else{
+                                
+                                    $("#popupBasic").popup("close");
+                            
+                            }
+                        });
+                    });
+                }
+                });
+            });
+        });
+    });
+
+
+});
+    $ ( document ). delegate ( "div.pull-demo-page" , "pageinit" , function ( event ) {
+        $ ( ".iscroll-wrapper" , this ). bind ( {
+            "iscroll_onpullup": onPull
+        });
+    });
     </script>
 </head>
 <body>
@@ -40,8 +95,15 @@
             <label for="phone">手机号码:</label>
             <input type="text" name="mobile" id="mobile" class="text" placeholder="请输入收货人手机号码">
             <label for="province">省份:</label>
-            <input type="text" name="province" data-rel="dialog" onclick="ck();" id="province" placeholder="请选择省份"class="text"/>
-
+            <input type="text" name="province" onclick="ck();" id="province" placeholder="请选择省份"class="text"/>
+            <a id="dig" href = "#popupBasic" data-rel="popup"></a>
+            <div data-role = "popup" id = "popupBasic" data-theme="c">
+                <div id="xp1" data-iscroll="" data-role="content">
+                    <ul id="ulxp" data-role="listview">
+                        <li><a id="tops" href="#">请选择</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <label for="city">城市:</label>
             <input type="text" name="city" id="city" class="text" placeholder="请选择城市">
@@ -54,10 +116,13 @@
             <input type="checkbox" class="checkbox" name="rate" id="checkbox-0" data-mini="true">
             <label for="checkbox-0">设为默认地址</label>
         </div>
+
     <div data-role="footer" class="ui-footer ui-bar-inherit" role="contentinfo">
         <div class="pay-box"><button data-role="submit" class="btn-pay-for ui-link add-address">保存</button></div>
     </div>
+
     </form>
+
 </div>
 </body>
 </html>
