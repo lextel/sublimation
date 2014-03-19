@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dialog example - jQuery Mobile Demos</title>
+    <link rel="stylesheet" href="../assets/css/jquery.mobile-1.4.1.min.css"/>
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/jquery.mobile.iscrollview.css"/>
+    <link rel="stylesheet" href="../assets/css/jquery.mobile.iscrollview-pull.css"/>
+	<link rel="stylesheet" href="../assets/css/jquery.mobile.iscrollview.css"/>
+    <link rel="stylesheet" href="../assets/css/jquery.mobile.iscrollview-pull.css"/>
+    <script src="../assets/js/jquery-1.10.1.min.js"></script>
+    <script src="../assets/js/jquery.mobile-1.4.1.min.js"></script>
+    <script src="../assets/js/iscroll.js"></script>
+    <script src="../assets/js/jquery.mobile.iscrollview.js"></script>
+    <script src="../assets/js/pull-example.js"></script>
+
+   
+<script>
+function onPull(){
+	alert(1);
+}
+	$.getJSON("../assets/js/city.js",function(json){
+		$.each(json,function (i,obj){
+			$("#ulxp").append("<li><a data-rel='dialog' href='dialog1.html?name="+obj.n+"'>"+obj.n+"</a></li>");
+		});
+	});
+	$ ( document ). delegate ( "div.pull-demo-page" , "pageinit" , function ( event ) {
+	 	$ ( ".iscroll-wrapper" , this ). bind ( {
+	 		"iscroll_onpullup": onPull
+	 	});
+	});
+</script>
+
+</head>
+<body>
+<div data-role="page" id="ownedDetail" class="pull-demo-page" data-dialog="true">
+
+		<div role="main" class="ui-content">
+			<div id="xp1" data-iscroll="" data-role="content">
+				<ul id="ulxp" data-role="listview">
+		      		<li><a href="">请选择</a></li>
+	   		 	</ul>
+	   		</div>
+		</div>
+
+</div>
+</body>
+</html>

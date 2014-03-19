@@ -1,7 +1,7 @@
 /*
-*ShowMessage £ºÌáÊ¾ÐÅÏ¢
-*mag   :ÌáÊ¾µÄÖµ
-*time  :ÌáÊ¾Ê±¼äºÁÃë£¬²»Ð´´Ë²ÎÊýÄ¬ÈÏÎª2000
+*ShowMessage 定时显示信息
+*mag   :提示信息
+*time  :毫秒为单位显示时间
 */
     function showMessage(mag,time){
         time = typeof time !== 'undefined' ? time : 2000;
@@ -15,6 +15,6 @@
     });
     var interval = setInterval(function (){
 	  $.mobile.loading( "hide" );
-	  clearTimeout(interval);  //¹Ø±Õ¶¨Ê±Æ÷
+	  clearTimeout(interval);
     	}, time);   
 	}

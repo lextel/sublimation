@@ -16,6 +16,12 @@
     <script src="<?php echo asset('assets/js/common.js');?>"></script>
     <script src="<?php echo asset('assets/js/home/address.js');?>"></script>
 
+    <script>
+    function ck(){
+        window.location.href ="../../html/dialog.html";
+        //window.location.href ="../../html/dialog.html";
+    }
+    </script>
 </head>
 <body>
 <!--添加地址-->
@@ -26,6 +32,7 @@
             <span class="icon-arrow-left"></span>
         </a>
     </div>
+
     <form method="post" action="" class="addForm">
         <div role="main" class="ui-content owned-detail">
             <label for="ftitle">收件人:</label>
@@ -33,24 +40,7 @@
             <label for="phone">手机号码:</label>
             <input type="text" name="mobile" id="mobile" class="text" placeholder="请输入收货人手机号码">
             <label for="province">省份:</label>
-            <input type="text" name="province" id="province" placeholder="请选择省份"
-            data-rel="popup" data-position-to="window" class="text ui-btn ui-corner-all ui-shadow 
-            ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop"/>
-            
-            <div data-role="popup" id="province" data-theme="a" class="ui-corner-all">
-                <form>
-                    <div style="padding:10px 20px;">
-                        <h3>Please sign in</h3>
-                        <label for="un" class="ui-hidden-accessible">Username:</label>
-                        <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
-
-                        <label for="pw" class="ui-hidden-accessible">Password:</label>
-                        <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
-
-                        <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
-                    </div>
-                </form>
-            </div>
+            <input type="text" name="province" data-rel="dialog" onclick="ck();" id="province" placeholder="请选择省份"class="text"/>
 
 
             <label for="city">城市:</label>
