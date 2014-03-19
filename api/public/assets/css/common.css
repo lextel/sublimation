@@ -271,7 +271,7 @@ button.btn-cancel {
   bottom: 0;
 }
 .product-list .info-wrap {
-  width: 56%;
+  width: 55%;
   margin-left: 0.8em;
   overflow: hidden;
 }
@@ -773,6 +773,43 @@ button.btn-cancel {
   padding: 0.8em;
   margin-bottom: 0.8em;
   box-shadow: 0 0 5px 3px #DBDADA;
+}
+.timing {
+  overflow: hidden;
+  padding: 0.6em;
+  border: 1px solid #af2812;
+  margin-right: 10px;
+}
+.timing ol {
+  overflow: hidden;
+}
+.timing ol li {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #af2812;
+  float: left;
+  overflow: hidden;
+}
+.timing ol li.symbol {
+  font-weight: bold;
+  margin: 0 5px;
+}
+.timing .title {
+  color: #af2812;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.timing ol li.count {
+  width: 30px;
+  font-size: 1.8rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #DDDDDD;
+}
+.product-list .active {
+  border: 1px solid #af2812;
+  box-shadow: 0 0 5px 1px #C44834;
 }
 /*乐拍记录*/
 .recor-list {
