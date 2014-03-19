@@ -150,7 +150,7 @@ a.btn-white {
 }
 a.btn-danger,
 button.btn-danger {
-  background: -webkit-gradient(linear, left top);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d1192e), to(#af2812));
   color: #ffffff;
   border: 1px solid #750000;
   box-shadow: 0px 0px 5px 0px #810202;
@@ -271,7 +271,8 @@ button.btn-cancel {
   bottom: 0;
 }
 .product-list .info-wrap {
-  width: 56%;
+  width: 55%;
+  margin-left: 0.8em;
   overflow: hidden;
 }
 .inner-wide {
@@ -411,6 +412,7 @@ button.btn-cancel {
   margin-bottom: 0.8em;
 }
 .period-nav {
+  border-top: 1px solid #D2D2D2;
   background: #ffffff;
 }
 .period-nav a.ui-link {
@@ -527,6 +529,7 @@ button.btn-cancel {
 .product-list .portrait {
   width: 25%;
   height: auto;
+  border-radius: 5px;
 }
 .product-list .right-box {
   overflow: hidden;
@@ -657,10 +660,6 @@ button.btn-cancel {
     -webkit-transform: scale(1);
   }
 }
-.content {
-  background: #ffffff;
-  padding: 0.8em;
-}
 /*揭晓*/
 .countdown {
   overflow: hidden;
@@ -672,11 +671,10 @@ button.btn-cancel {
 .countdown ul {
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: 0.6em;
 }
 .countdown ul li {
   float: left;
-  font-size: 1.4rem;
+  font-size: 2.5em;
   color: #af2812;
   overflow: hidden;
   height: 50px;
@@ -693,15 +691,6 @@ button.btn-cancel {
   border: 1px solid #D2D2D2;
   text-align: center;
   font-weight: bold;
-}
-.count-fd {
-  overflow: hidden;
-  padding: 0.6em 0 0;
-  border-top: 1px dashed #D2D2D2;
-}
-.count-fd .luckycode {
-  margin-top: 6px;
-  width: 60%;
 }
 .progress-bar {
   float: left;
@@ -737,22 +726,23 @@ button.btn-cancel {
   background: #ffffff;
   margin-bottom: 0.8em;
 }
-.win-warp ul {
-  padding: 0.6em;
-  overflow: hidden;
-}
-.win-warp ul {
+.win-warp .win-bd {
   padding: 0.8em;
   overflow: hidden;
 }
-.win-warp ul li {
+.win-warp .win-fd {
   overflow: hidden;
-  width: 22%;
-  float: left;
-  margin-right: 0.6em;
+  padding: 0.6em 0.8em;
+  border-top: 1px solid #D2D2D2;
+  background: #f1f1f1;
 }
-.win-warp ul li:last-child {
-  margin-right: 0em;
+.win-warp .win-fd .info {
+  width: 70%;
+  margin-top: 4px;
+}
+.win-warp .info-wrap {
+  margin-left: 0.8em;
+  width: 64%;
 }
 .lucency {
   margin: 0;
@@ -774,16 +764,52 @@ button.btn-cancel {
   font-size: 1.8rem;
   border: 1px solid #D2D2D2;
   background: #ffffff;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
 }
 .innerBanner {
   overflow: hidden;
   border: 1px solid #D2D2D2;
   background: #ffffff;
-  max-height: 240px;
   padding: 0.8em;
   margin-bottom: 0.8em;
   box-shadow: 0 0 5px 3px #DBDADA;
+}
+.timing {
+  overflow: hidden;
+  padding: 0.6em;
+  border: 1px solid #af2812;
+  margin-right: 10px;
+}
+.timing ol {
+  overflow: hidden;
+}
+.timing ol li {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #af2812;
+  float: left;
+  overflow: hidden;
+}
+.timing ol li.symbol {
+  font-weight: bold;
+  margin: 0 5px;
+}
+.timing .title {
+  color: #af2812;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.timing ol li.count {
+  width: 30px;
+  font-size: 1.8rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #DDDDDD;
+}
+.product-list .active {
+  border: 1px solid #af2812;
+  box-shadow: 0 0 5px 1px #C44834;
 }
 /*乐拍记录*/
 .recor-list {
@@ -833,12 +859,14 @@ button.btn-cancel {
   background: #ffffff;
   border: 1px solid #D2D2D2;
 }
-.content .title {
+.content h4 {
   text-align: center;
   padding: 0.4em;
+  background: #eeeeee;
 }
-.content .datetime {
+.content .info {
   text-align: center;
+  background: #eeeeee;
 }
 .content p {
   font-size: 1.4rem;
@@ -1171,7 +1199,7 @@ html .btn-theme-a {
   padding: .8em ;
   display: block;
   border: 1px solid #D2D2D2;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eeeeee));
 }
 .link-menu ul li b {
   margin: 0 5px;
@@ -1264,15 +1292,23 @@ html .btn-theme-a {
   width: 56%;
 }
 .owned-detail {
-  padding: 0;
+  overflow: hidden;
+  padding: 0.8em;
+  background: #ffffff;
 }
 .owned-detail .item {
-  padding: 0;
-  background: #ffffff;
-  border: 0;
+  margin-bottom: 0.8em;
 }
-.uckycode-list,
+.owned-detail .info-wrap {
+  width: 53%;
+  margin-left: 0.8em;
+}
 .express-list {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+}
+.uckycode-list {
   overflow: hidden;
   margin: 0 0.8em 0.8em;
   background: #ffffff;
@@ -1299,10 +1335,6 @@ html .btn-theme-a {
 }
 .express-list dd .row {
   margin-left: 1.5em;
-}
-.uckycode-list p,
-.express-list p {
-  margin-bottom: 0.312em ;
 }
 .arrow-right {
   width: 15px;
