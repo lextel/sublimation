@@ -24,16 +24,19 @@ if(!in_array($params['type'], $types)) die('type error');
 /**
  * 验证size
  */
-if(!preg_match('/^(\d+)x(\d+)$/', $params['size'])) die('size error');
+if($params['size'] != 'desc' || !preg_match('/^(\d+)x(\d+)$/', $params['size'])) die('size error');
 
 // 原目录
 $originalPath = UPLOAD.DS.$params['type'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
 
 // 目标目录
-echo $targetPath   = UPLOAD.DS.$params['type'].DS.$params['size'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
+$targetPath   = UPLOAD.DS.$params['type'].DS.$params['size'].DS.$params['path1'].DS.$params['path2'].DS.$params['filename'];
 
 // 生成缩略图操作
 if(!file_exists($targetPath)) {
+
+    if($params['size'] == 'desc') die('file not exists');
+
     list($width, $height) = explode('x', $params['size']);
     
     $thumb = new Imagick();
