@@ -10,7 +10,8 @@ include 'functions.php';
 
 $uris = getUris();
 
-if($uris[0] == 'upload') {
+//if($uris[0] == 'upload') {
+
     /**
      * url 形式必须为:
      *    http://(host)/upload/(type)
@@ -20,7 +21,7 @@ if($uris[0] == 'upload') {
      *
      */
     // include 'upload.php'; // 取消上传功能
-} else {
+// } else {
 
     /**
      * url形式必须为
@@ -37,4 +38,4 @@ if($uris[0] == 'upload') {
      */
 
     include 'image.php';
-}
+//}

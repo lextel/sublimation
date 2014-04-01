@@ -1,9 +1,10 @@
 <?php
-// ini_set("display_errors",1);
-// error_reporting(-1);
+ ini_set("display_errors",1);
+ error_reporting(-1);
+
 
 define('DS', DIRECTORY_SEPARATOR);
-define('UPLOAD', __DIR__.DS.'uploads');
+define('UPLOAD', __DIR__.DS.'upload');
 
 
 /**
@@ -14,7 +15,7 @@ define('UPLOAD', __DIR__.DS.'uploads');
  * shares :   晒单图片
  * avatars:   用户头像
  */
-$types = ['banners', 'items', 'shares', 'avatars'];
+$types = ['ad', 'item', 'post', 'avatar'];
 
 
 
