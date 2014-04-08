@@ -57,6 +57,7 @@ if(!file_exists($targetPath) && file_exists($originalPath)) {
         $h = $imageprops['height'];
         if($w > $h){
             $height = $h / $w / $width;
+        }elseif($width == $height) {
         } else {
             if(empty($height)) { 
                 $height = $h / $w / $width;
@@ -65,9 +66,9 @@ if(!file_exists($targetPath) && file_exists($originalPath)) {
         }
     }
     
-    $thumb = new Imagick();
-    $thumb->readImage($originalPath);
-    $thumb->cropThumbnailImage($width, $height, Imagick::FILTER_LANCZOS,1);
+    $thumb = new Imagick($originalPath);
+    //$thumb->cropThumbnailImage($width, $height, Imagick::FILTER_LANCZOS,1);
+    $thumb->cropThumbnailImage($width, $height);
     $path = dirname($targetPath);
     checkDir($path);
     $thumb->writeImage($targetPath);
