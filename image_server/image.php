@@ -67,7 +67,7 @@ if(!file_exists($targetPath) && file_exists($originalPath)) {
     
     $thumb = new Imagick();
     $thumb->readImage($originalPath);
-    $thumb->resizeImage($width, $height, Imagick::FILTER_LANCZOS,1);
+    $thumb->cropThumbnailImage($width, $height, Imagick::FILTER_LANCZOS,1);
     $path = dirname($targetPath);
     checkDir($path);
     $thumb->writeImage($targetPath);
